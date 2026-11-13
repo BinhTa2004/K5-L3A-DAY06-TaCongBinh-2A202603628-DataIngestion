@@ -83,7 +83,13 @@ def main() -> None:
         visual_audit = list(csv.DictReader(handle))
     require(len(visual_audit) == 8, "Expected eight recorded visual samples")
     for sample in visual_audit:
-        require((ROOT / sample["preview"]).is_file(), "Missing visual audit preview")
+        spec = next((item for item in CORPUS if item["document_id"] == sample["document_id"]), None)
+        require(spec is not None, "Unknown visual audit document")
+        source_path = f"data/raw/{spec['filename']}"
+        require(sample["source_pdf"] == source_path and (ROOT / source_path).is_file(),
+                "Missing or incorrect visual audit source PDF")
+        require(spec["first_page"] <= int(sample["page"]) <= spec["last_page"],
+                "Visual audit page is outside the selected corpus")
 
     docs = []
     checked_pages = []

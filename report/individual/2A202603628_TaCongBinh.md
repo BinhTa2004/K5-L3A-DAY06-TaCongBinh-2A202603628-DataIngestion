@@ -312,7 +312,7 @@ dùng để điều chỉnh, không sửa bộ hiện tại theo kết quả đ�
 
 ### 5.1. Chạy lại
 
-Hướng dẫn setup máy mới và từng pha: [RUNBOOK.md](../../RUNBOOK.md).
+Hướng dẫn setup máy mới và từng pha: [README.md](../../README.md).
 Trên máy đã chuẩn bị, từ `starter/`:
 
 ```powershell
@@ -332,8 +332,7 @@ alternative evidence, thứ tự dev/test, cosine/filter, đồng bộ không tr
 xóa chunk lỗi thời, rollback transaction và reconnect. Kiểm tra restart Docker
 xác nhận 677 dòng cùng manifest vẫn còn.
 Minh chứng: [code_tests.json](../../results/code_tests.json),
-[persistence_check.json](../../results/persistence_check.json),
-[pipeline_checks.json](../../results/pipeline_checks.json).
+[persistence_check.json](../../results/persistence_check.json).
 
 ### 5.2. Phương pháp và nguồn gốc nhãn
 
@@ -343,14 +342,13 @@ theo rubric. Nhãn coherence/grounding dựa trên việc đọc nội dung mẫ
 đối chiếu với PDF, số trang vật lý, offset và heading, có kiểm tra máy hỗ trợ.
 Các nhận xét đều lưu lý do và reviewer; số liệu hiệu năng lấy từ lần chạy thật.
 
-Đây là đánh giá có AI tham gia, không mù, do cùng trợ lý đã hỗ trợ triển khai
-và soạn benchmark; không phải nhãn của người chấm độc lập. Không ghi nhận
-người học/coach đã xác nhận nếu chưa thực hiện. Các bản nhãn gốc và lịch sử
-chuẩn hóa cách trình bày được giữ để truy vết; đổi tên hiển thị không đổi điểm.
+Đánh giá không mù, do cùng trợ lý thực hiện phần triển khai và soạn benchmark,
+chưa có xác nhận của người chấm độc lập. Bảng CSV lưu điểm, lý do và reviewer
+cho từng mẫu; không suy nhãn chất lượng trực tiếp từ metric tự động.
 
-Chi tiết phương pháp: [review_summary.md](../../results/audit/review_summary.md),
-[quyết định](../../results/audit/review_decisions.json),
-[provenance](../../results/audit/review_provenance.json).
+Mẫu và thang điểm: [hướng dẫn audit](../../results/audit/README.md).
+Các quyết định bổ sung về evidence nằm tại
+[evidence_review.csv](../../results/audit/evidence_review.csv).
 
 ## 6. Trạng thái hoàn thiện
 

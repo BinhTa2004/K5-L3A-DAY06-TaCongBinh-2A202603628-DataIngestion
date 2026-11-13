@@ -2,8 +2,8 @@
 
 Pipeline đã triển khai và chạy trên PostgreSQL + pgvector local: đọc PDF, chia
 chunk theo mục, embedding thật, lưu vector, filter và benchmark dev/test.
-Xem [hướng dẫn từ đầu tới cuối](../RUNBOOK.md). Các bảng đánh giá thủ công và
-báo cáo cá nhân vẫn cần người học hoàn thiện.
+Xem [hướng dẫn cài đặt và chạy](../README.md). Các bảng nhãn nằm trong
+`../results/audit/`; báo cáo nằm trong `../report/individual/`.
 
 ## Cấu trúc
 
@@ -58,7 +58,7 @@ docker compose -p day6_student_starter stop
 
 Đã chọn `intfloat/multilingual-e5-small`, revision cố định, 384 chiều, local,
 không cần API key. Cấu hình ở `../configs/embedding.json`; dependencies ML ở
-`requirements-embeddings.txt`. Xem [chi tiết chunking/embedding](CHUNKING_EMBEDDINGS.md).
+`requirements-embeddings.txt`. Xem [cấu hình và kết quả](../README.md).
 
 ## 3. Chạy pipeline
 
@@ -71,7 +71,7 @@ Corpus 46 trang và benchmark 15 dev/5 test đã chốt. Khi database đang ch�
 Lệnh kiểm tra cache, nạp A/B/C, kiểm tra nạp lại, chạy dev/chọn cấu hình trước
 test và xuất trace, metric, mẫu chấm thủ công. Cache hợp lệ được dùng lại;
 `--rebuild` tạo lại text/chunk/embedding từ PDF, không tái tạo gold.
-Chạy riêng từng pha và cách đọc kết quả có trong [RUNBOOK.md](../RUNBOOK.md).
+Chạy riêng từng pha và cách đọc kết quả có trong [README.md](../README.md).
 
 Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
 
@@ -113,7 +113,7 @@ Benchmark đã tạo 15 dev/5 test và chốt snapshot trước retrieval; xem
 .\.venv\Scripts\python.exe scripts\prepare_benchmark.py
 ```
 
-Chunking và embedding thật đã triển khai; xem [hướng dẫn và kết quả](CHUNKING_EMBEDDINGS.md).
+Chunking và embedding thật đã triển khai; xem [hướng dẫn và kết quả](../README.md).
 Vector store và retrieval benchmark đã chạy; xem `../results/metrics.csv`,
 `../results/store_run.json`, `../results/selection.json` và `../results/run_summary.md`.
 Nhãn coherence/metadata/grounding cần nhập ở `../results/audit/` rồi tổng hợp

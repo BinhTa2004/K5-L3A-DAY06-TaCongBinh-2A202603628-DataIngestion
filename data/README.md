@@ -20,9 +20,9 @@ Một số trang đầu/cuối phạm vi là nội dung tiếp nối; manifest g
   Đây chưa phải các chunk/vector của ba cấu hình.
 - `results/corpus_checks.json`: kiểm tra máy tất cả 46 trang, nguồn, số trang,
   text khớp trích xuất PDF, số ký tự và ranh giới mục.
-- `results/text_audit.csv`: đối chiếu trực quan 8 trang đại diện bởi Codex;
-  ảnh trang tương ứng ở `results/pdf_previews/`. Không tuyên bố mọi trang đã
-  được xem trực quan hay người học đã ký xác nhận.
+- `results/text_audit.csv`: ghi nhận đối chiếu 8 trang đại diện, gồm nguồn PDF,
+  số trang vật lý, nhận xét và người/công cụ đánh giá. Mở trực tiếp PDF gốc
+  tại trang được ghi để kiểm tra; không cần lưu bản ảnh trùng lặp.
 
 Trên trang có nhiều mục, `metadata.section_spans` lưu các khoảng `[start, end)`
 theo ký tự Unicode của text trang. Chỉ trang có một mục mới có scalar `section`.

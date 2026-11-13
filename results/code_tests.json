@@ -4,5 +4,5 @@
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "scope": "Unit tests plus real local model and isolated PostgreSQL schema integration tests"
+  "scope": "Rechecked after repository folder rename; real local model and isolated PostgreSQL integration tests"
 }

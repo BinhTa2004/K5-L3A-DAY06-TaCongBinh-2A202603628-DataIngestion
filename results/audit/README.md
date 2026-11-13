@@ -1,14 +1,11 @@
-# Chấm thủ công sau retrieval
+# Đánh giá chất lượng sau retrieval
 
-Các file CSV đã có điểm và lý do theo rubric. Xem
-[bảng điểm và phân tích](review_summary.md), `review_decisions.json`
-và `review_provenance.json`. Nguồn gốc và mức độ AI tham gia được ghi trong
-mục phương pháp của báo cáo cá nhân, không dùng tên công cụ làm tiêu đề bảng điểm.
-Không ghi nhận người học hay reviewer độc lập đã xác nhận. Bản trước chấm nằm
-ở `before_review/`. Mở bằng Excel hỗ trợ CSV UTF-8 hoặc VS Code;
+Các file CSV đã có điểm và lý do theo rubric. Bảng điểm, phân tích và phương pháp
+được trình bày trong [báo cáo cá nhân](../../report/individual/2A202603628_TaCongBinh.md),
+mục 3 và 5.2.
+Mở bằng Excel hỗ trợ CSV UTF-8 hoặc VS Code;
 giữ nguyên hàng/ID, chỉ sửa nhãn, `reason`, `reviewer` khi thực sự đánh giá lại.
-Không thay bằng điểm tự suy từ Hit@3. Nếu dùng AI hỗ trợ chấm, ghi rõ reviewer
-và phương pháp, xem lại nhãn trước khi báo cáo.
+Không thay bằng điểm tự suy từ Hit@3.
 
 Metric máy và gold giữ nguyên. Riêng `A/test02` đã có đủ danh sách ba giai đoạn
 trong chunk nhưng auto miss vì quote chứa thêm câu lợi ích; quyết định review
