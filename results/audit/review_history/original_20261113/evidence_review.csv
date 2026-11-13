@@ -1,0 +1,27 @@
+﻿strategy,question_id,auto_hit_at_1,auto_evidence_hit_at_3,reviewed_single_chunk_hit_at_1,reviewed_single_chunk_hit_at_3,sufficient_rank,sufficient_chunk_id,supporting_quote,reason,reviewer
+A,test01,0,0,0,0,,,,"Top-3 nói về style transfer, chất lượng/tốc độ rendering và ứng dụng chung. Không có mệnh đề giải thích vì sao phải mô hình hóa thời gian để biểu diễn cảnh thay đổi; nhắc scene dynamics chung chưa đủ bằng chứng trả lời.",Codex (AI-assisted review)
+A,test02,0,0,1,1,1,gs_driving_review:p26:fixed_size:9a6e5fe9b3bbedcf691c48e6,"GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation","Rank 1, gs_driving_review trang 26, đã nêu đủ sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation. Phần lợi ích sau danh sách bị cắt nhưng câu hỏi chỉ hỏi ba giai đoạn; có đủ bằng chứng và nguồn. Auto miss là do yêu cầu chứa toàn bộ quote dài hơn.",Codex (AI-assisted review)
+A,test03,1,1,1,1,1,gs_driving_review:p20:fixed_size:94b8ec42bbca8327f3813808,"SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic.","Rank 1 trang 20 nói trực tiếp SplaTAM dùng view-independent colors và Gaussian isotropic, đủ cả hai yêu cầu. Hai kết quả ngoài mục được ghi thành lỗi filter riêng, không xóa giá trị bằng chứng đầy đủ của rank 1.",Codex (AI-assisted review)
+A,test04,0,0,0,0,,,,"Các đoạn đề cập Deformable 3D Gaussians và biểu diễn cảnh động, không nêu PhysGaussian hay liên hệ mô phỏng cơ học với Gaussian. Không suy đáp án cho một phương pháp cụ thể chỉ từ từ khóa Gaussian chung.",Codex (AI-assisted review)
+A,test05,0,1,0,1,2,gs_general_survey:p21:fixed_size:f13f0400d894dc45e5c46668,"• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.","Rank 2, gs_general_survey trang 21, có heading Surgical Scenes và câu Evaluation Metric nêu PSNR, SSIM, LPIPS. Đủ đáp án và ngữ cảnh phẫu thuật dù rank 1 lệch chủ đề.",Codex (AI-assisted review)
+B,test01,0,0,0,0,,,,"Rank 1 trang 12 nhắc annealing smoothing để tăng temporal smoothness, là bằng chứng liên quan một phần đến thời gian. Top-3 không giải thích trực tiếp việc biểu diễn cảnh/vật thể thay đổi theo thời gian, nên chưa đủ trả lời đầy đủ.",Codex (AI-assisted review)
+B,test02,1,1,1,1,1,gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331,"GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation to efficiently localize the target object and signifi-
+cantly improve the performance.","Rank 1 trang 26 giữ nguyên câu liệt kê đủ ba giai đoạn GaussNav cùng ngữ cảnh điều hướng; nguồn và trang rõ. Các đoạn còn lại bổ sung bối cảnh, không cần để hoàn thành đáp án.",Codex (AI-assisted review)
+B,test03,1,1,1,1,1,gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075,"SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic.","Rank 1 trang 20 xác định SplaTAM và nêu đủ màu view-independent, Gaussian isotropic. Top-3 có bằng chứng đầy đủ; hai chunk khác mục không thay thế việc chấm đúng metadata/filter riêng.",Codex (AI-assisted review)
+B,test04,0,0,0,0,,,,"Top-3 thuộc Deformable 3D Gaussians, dynamic scene reconstruction và DrivingGaussian/PVG; không có bằng chứng về PhysGaussian hay cách mô phỏng cơ học của nó.",Codex (AI-assisted review)
+B,test05,1,1,1,1,1,gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386,"• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.","Rank 1 trang 21 giữ heading Performance Benchmarking: Surgical Scenes và danh sách PSNR, SSIM, LPIPS. Đủ nội dung trả lời và truy nguồn, không cần suy từ benchmark cảnh động.",Codex (AI-assisted review)
+C,test01,0,0,0,0,,,,Câu không có filter nên top-3 giống B. Chỉ đoạn temporal smoothness liên quan một phần; thiếu giải thích trực tiếp vì sao phải mô hình hóa thời gian cho cảnh thay đổi.,Codex (AI-assisted review)
+C,test02,1,1,1,1,1,gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331,"GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation to efficiently localize the target object and signifi-
+cantly improve the performance.",Rank 1 trang 26 nêu đủ ba giai đoạn GaussNav; toàn bộ top-3 đúng mục Vehicle navigation đã yêu cầu. Bằng chứng và truy nguồn đầy đủ.,Codex (AI-assisted review)
+C,test03,1,1,1,1,1,gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075,"SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic.",Rank 1 trang 20 nêu đủ hai đơn giản hóa của SplaTAM; filter giữ cả ba kết quả trong mục Simultaneous localization and mapping. Các bảng/kết quả khác không cần dùng để suy hai thuộc tính này.,Codex (AI-assisted review)
+C,test04,0,0,0,0,,,,Không có filter và top-3 giống B; các phương pháp Deformable/DrivingGaussian không cung cấp bằng chứng về phương pháp PhysGaussian được hỏi.,Codex (AI-assisted review)
+C,test05,1,1,1,1,1,gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386,"• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.","Câu không có filter nên top-3 giống B. Rank 1 có đúng ngữ cảnh Surgical Scenes và cả ba metric PSNR, SSIM, LPIPS; đủ để trả lời và truy nguồn.",Codex (AI-assisted review)

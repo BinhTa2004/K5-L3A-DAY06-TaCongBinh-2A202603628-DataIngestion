@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-13T17:43:23.650868+07:00",
+  "rows_after_restart": {
+    "A": 219,
+    "B": 229,
+    "C": 229
+  },
+  "total_rows": 677,
+  "snapshot_manifests_match": true,
+  "backend": {
+    "database": "day6_lab",
+    "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector_version": "0.8.7",
+    "schema": "day06",
+    "dimensions": 384,
+    "metric": "cosine",
+    "search": "exact sequential scan; no ANN index"
+  },
+  "method": "Docker Compose restart postgres, wait healthy, then new Python database connection"
+}

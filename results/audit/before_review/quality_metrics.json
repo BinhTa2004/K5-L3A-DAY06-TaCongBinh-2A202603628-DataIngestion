@@ -1,0 +1,75 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "manual_review_complete": false,
+  "audits": {
+    "coherence": {
+      "A": {
+        "labeled": 0,
+        "sample_size": 10,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "B": {
+        "labeled": 0,
+        "sample_size": 10,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "C": {
+        "labeled": 0,
+        "sample_size": 10,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      }
+    },
+    "metadata": {
+      "A": {
+        "labeled": 0,
+        "sample_size": 15,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "B": {
+        "labeled": 0,
+        "sample_size": 15,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "C": {
+        "labeled": 0,
+        "sample_size": 15,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      }
+    },
+    "grounding": {
+      "A": {
+        "labeled": 0,
+        "sample_size": 5,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "B": {
+        "labeled": 0,
+        "sample_size": 5,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      },
+      "C": {
+        "labeled": 0,
+        "sample_size": 5,
+        "complete": false,
+        "mean": null,
+        "label_counts": null
+      }
+    }
+  }
+}

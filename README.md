@@ -45,3 +45,32 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+## Tiến độ bài làm hiện tại
+
+Đã hoàn tất bước đọc PDF, kiểm tra corpus và chuẩn bị bộ câu hỏi trước retrieval:
+
+- [Manifest và hướng dẫn corpus](data/README.md): 2 tài liệu, 46 trang,
+  96 đoạn theo heading; bản arXiv được ghi rõ `v9`.
+- [Kiểm tra máy](results/corpus_checks.json) và [đối chiếu 8 trang PDF](results/text_audit.csv).
+- [Benchmark](benchmark/README.md): 15 dev, 5 test, 5 câu filter, 25 passage gold.
+- [Quy trình đánh giá đã định trước](benchmark/protocol.json) và
+  [mã kiểm tra snapshot](benchmark/lock.json).
+
+Đã triển khai [chunking và embedding local](starter/CHUNKING_EMBEDDINGS.md):
+A có 219 chunk; B/C có 229 chunk và dùng chung vector cho B/C.
+Đã tạo vector thật 384 chiều cho chunk và 20 câu hỏi, không dùng vector mock.
+Thống kê tại [chunking_stats.json](results/chunking_stats.json), model/version,
+thời gian và chi phí tại [embedding_run.json](results/embedding_run.json).
+
+Đã triển khai vector store, evaluation và CLI nối pipeline; đã chạy trên
+PostgreSQL 16.16 + pgvector 0.8.7. [RUNBOOK.md](RUNBOOK.md) hướng dẫn hoạt động
+và cách chạy từ đầu tới cuối; [kết quả](results/run_summary.md) có metric dev/test.
+Dev chọn C trước khi chạy test. [Đánh giá theo rubric](results/audit/review_summary.md)
+đã có 30 nhãn coherence, 45 metadata và 15 grounding, kèm lý do/reviewer.
+Đã có thông tin học viên và báo cáo cá nhân; còn chốt commit, ghi SHA thực tế,
+push repo và kiểm tra quyền truy cập/quyền chia sẻ trước khi nộp.
+Phương pháp và nguồn gốc nhãn được ghi trong
+[báo cáo cá nhân](report/individual/2A202603628_TaCongBinh.md).
+Thông tin về việc AI tham gia được giữ trong phương pháp; không ghi nhận
+người học đã duyệt thủ công khi chưa có xác nhận thực tế.

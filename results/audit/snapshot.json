@@ -1,0 +1,8 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "expected_rows": {
+    "coherence": 30,
+    "metadata": 45,
+    "grounding": 15
+  }
+}

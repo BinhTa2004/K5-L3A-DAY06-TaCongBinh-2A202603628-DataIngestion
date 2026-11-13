@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "length_unit": "Unicode characters",
+  "boundary_rule": "Never cross a physical page or source section boundary",
+  "comparison": "A-B change the splitting algorithm at the same 1000-character cap and zero overlap. B-C change only query-time metadata filtering; chunks and document vectors are shared.",
+  "strategies": {
+    "A": {"chunking": "fixed_size", "chunk_size": 1000, "overlap": 0, "metadata_filter": false},
+    "B": {"chunking": "by_paragraph", "chunk_size": 1000, "overlap": 0, "metadata_filter": false},
+    "C": {"chunking": "by_paragraph", "chunk_size": 1000, "overlap": 0, "metadata_filter": true, "reuse_chunks_from": "B", "reuse_document_vectors_from": "B"}
+  }
+}

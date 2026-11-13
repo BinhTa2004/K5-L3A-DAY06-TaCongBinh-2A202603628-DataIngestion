@@ -1,0 +1,716 @@
+{
+  "reviewer": "Trợ lý AI — đánh giá theo rubric",
+  "reviewed_at": "2026-11-13T18:35:35.169333+07:00",
+  "experiment_fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "label_origin": "Explicit AI-assisted semantic decisions, not labels inferred from automatic Hit@3",
+  "student_or_independent_human_signoff": false,
+  "blinded_review": false,
+  "backup_directory": "results/audit/before_review",
+  "protected_hashes_unchanged": {
+    "results\\metrics.csv": "f671175acdd4f3bc574abcb15dc07357685cb559274996a93abe1cf1e0149dc4",
+    "results\\retrieval_metrics.json": "40abcb045b203f9f4e71b660097a044e44ab1c05114c8fa45f20bc19296fdde9",
+    "results\\selection.json": "25aa6c01f5420ae0f4858668a6ee056c2cbe018de52469f126cec17ae5dfcd52",
+    "benchmark\\lock.json": "d99f20f0cab4de6c251f7e081302249295f2ab669e65aad90b9b72c2a506911b",
+    "benchmark\\dev.json": "72057eccb6619900384db6fe8fddd0cb18d4828c3a61f85df9c1948262475a10",
+    "benchmark\\test.json": "37771dea78e2563609262bb7736bb3daf51746f5fbed2932123c6b73cbf86c61",
+    "data\\processed\\pages.jsonl": "3a3bd244363a83dd71b60a41b3883cd1eeee160206faf8212ce9ce4ebcc697b6",
+    "data\\processed\\sections.jsonl": "d51effa30a8a52e7985f9044a7537dd67e4ef542c10aa418a4011a1e357d8469",
+    "data\\section_boundaries.json": "72c4b89495fe7f84ffda983e7d832931c09a469ab3378b10d554d28047a04282",
+    "data\\manifest.json": "6c27bcb510d2b5e4c19925a8bc90afb69e29e3136a678fa66dbff795279e802e",
+    "benchmark\\protocol.json": "758280af61fbf58631ed03168b4735597616ba2960d2aa09e521a8a828310880",
+    "benchmark\\README.md": "23317f9d0460b2ea8a8e7f5d8241867410076fe5c66ee3612b0dedd55619f652"
+  },
+  "rows": {
+    "coherence": 30,
+    "metadata": 45,
+    "grounding": 15
+  },
+  "metadata_verification": [
+    {
+      "strategy": "A",
+      "question_id": "test01",
+      "rank": 1,
+      "chunk_id": "gs_general_survey:p12:fixed_size:a5cdf35815a901351e5071f0",
+      "source_pdf_page": 12,
+      "source_heading_page": 11,
+      "offset": [
+        1000,
+        1568
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test01",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p12:fixed_size:c23ba6943b76e2fe2d15eafd",
+      "source_pdf_page": 12,
+      "source_heading_page": 8,
+      "offset": [
+        0,
+        158
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test01",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p2:fixed_size:3d9a03dac7b9bae0a24c579b",
+      "source_pdf_page": 2,
+      "source_heading_page": 1,
+      "offset": [
+        2000,
+        3000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test02",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p26:fixed_size:9a6e5fe9b3bbedcf691c48e6",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        2000,
+        3000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test02",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p25:fixed_size:736c3c7b67b29aec3b7ac210",
+      "source_pdf_page": 25,
+      "source_heading_page": 25,
+      "offset": [
+        2390,
+        2863
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test02",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p26:fixed_size:109c4b656975a5282c49bfe2",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        1000,
+        2000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test03",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p20:fixed_size:94b8ec42bbca8327f3813808",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        3341,
+        3742
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test03",
+      "rank": 2,
+      "chunk_id": "gs_general_survey:p19:fixed_size:d30a1de291f43fe371eab087",
+      "source_pdf_page": 19,
+      "source_heading_page": 19,
+      "offset": [
+        3968,
+        4302
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": false,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test03",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p11:fixed_size:5ea4e3147f7ec9d1e7e8026e",
+      "source_pdf_page": 11,
+      "source_heading_page": 8,
+      "offset": [
+        2000,
+        3000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": false,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test04",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p18:fixed_size:da0d21fe120912d4a07ce70b",
+      "source_pdf_page": 18,
+      "source_heading_page": 16,
+      "offset": [
+        0,
+        351
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test04",
+      "rank": 2,
+      "chunk_id": "gs_general_survey:p15:fixed_size:fc7b7b7f5750c0e20fa0fee9",
+      "source_pdf_page": 15,
+      "source_heading_page": 14,
+      "offset": [
+        1000,
+        1960
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test04",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p15:fixed_size:e704d9e29a82248c6d3bdac4",
+      "source_pdf_page": 15,
+      "source_heading_page": 14,
+      "offset": [
+        0,
+        1000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test05",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p5:fixed_size:e535ce6865762136eb8d16af",
+      "source_pdf_page": 5,
+      "source_heading_page": 4,
+      "offset": [
+        0,
+        1000
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test05",
+      "rank": 2,
+      "chunk_id": "gs_general_survey:p21:fixed_size:f13f0400d894dc45e5c46668",
+      "source_pdf_page": 21,
+      "source_heading_page": 21,
+      "offset": [
+        307,
+        1307
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "A",
+      "question_id": "test05",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p20:fixed_size:9fc67d3d2fea4d11365359b8",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        1543,
+        2543
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test01",
+      "rank": 1,
+      "chunk_id": "gs_general_survey:p12:by_paragraph:e926e9ed941d3d466bdf61d5",
+      "source_pdf_page": 12,
+      "source_heading_page": 11,
+      "offset": [
+        889,
+        1568
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test01",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p12:by_paragraph:0942917d26b4e5f11cd91007",
+      "source_pdf_page": 12,
+      "source_heading_page": 8,
+      "offset": [
+        0,
+        158
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test01",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p2:by_paragraph:fe858319bddbc870ff310875",
+      "source_pdf_page": 2,
+      "source_heading_page": 1,
+      "offset": [
+        1818,
+        2800
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test02",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        2744,
+        3087
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test02",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p26:by_paragraph:1509b0734c62e342eae3adfb",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        1817,
+        2744
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test02",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p25:by_paragraph:1e6449bbf119097fa8ed0da3",
+      "source_pdf_page": 25,
+      "source_heading_page": 25,
+      "offset": [
+        2390,
+        2863
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test03",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        3187,
+        3742
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test03",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p11:by_paragraph:14343bfe9de27a5bbc2fd991",
+      "source_pdf_page": 11,
+      "source_heading_page": 8,
+      "offset": [
+        1659,
+        2657
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": false,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test03",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb",
+      "source_pdf_page": 15,
+      "source_heading_page": 14,
+      "offset": [
+        0,
+        818
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": false,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test04",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p18:by_paragraph:4fd929fec584f30a9149bfd6",
+      "source_pdf_page": 18,
+      "source_heading_page": 16,
+      "offset": [
+        0,
+        351
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test04",
+      "rank": 2,
+      "chunk_id": "gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb",
+      "source_pdf_page": 15,
+      "source_heading_page": 14,
+      "offset": [
+        0,
+        818
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test04",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p21:by_paragraph:e017e155011f028e2a7366c3",
+      "source_pdf_page": 21,
+      "source_heading_page": 20,
+      "offset": [
+        1841,
+        2685
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test05",
+      "rank": 1,
+      "chunk_id": "gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386",
+      "source_pdf_page": 21,
+      "source_heading_page": 21,
+      "offset": [
+        307,
+        1227
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test05",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p5:by_paragraph:f95dc903441b9b3bf718c288",
+      "source_pdf_page": 5,
+      "source_heading_page": 4,
+      "offset": [
+        0,
+        779
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "B",
+      "question_id": "test05",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p20:by_paragraph:d2a956cd1e7719a397496f43",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        1543,
+        2431
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test01",
+      "rank": 1,
+      "chunk_id": "gs_general_survey:p12:by_paragraph:e926e9ed941d3d466bdf61d5",
+      "source_pdf_page": 12,
+      "source_heading_page": 11,
+      "offset": [
+        889,
+        1568
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test01",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p12:by_paragraph:0942917d26b4e5f11cd91007",
+      "source_pdf_page": 12,
+      "source_heading_page": 8,
+      "offset": [
+        0,
+        158
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test01",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p2:by_paragraph:fe858319bddbc870ff310875",
+      "source_pdf_page": 2,
+      "source_heading_page": 1,
+      "offset": [
+        1818,
+        2800
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test02",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        2744,
+        3087
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test02",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p26:by_paragraph:1509b0734c62e342eae3adfb",
+      "source_pdf_page": 26,
+      "source_heading_page": 25,
+      "offset": [
+        1817,
+        2744
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test02",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p25:by_paragraph:1e6449bbf119097fa8ed0da3",
+      "source_pdf_page": 25,
+      "source_heading_page": 25,
+      "offset": [
+        2390,
+        2863
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test03",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        3187,
+        3742
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test03",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p21:by_paragraph:2aee391c87ae58b5d405feba",
+      "source_pdf_page": 21,
+      "source_heading_page": 20,
+      "offset": [
+        2685,
+        3600
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test03",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p21:by_paragraph:510217515644f19258346018",
+      "source_pdf_page": 21,
+      "source_heading_page": 20,
+      "offset": [
+        0,
+        932
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": true,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test04",
+      "rank": 1,
+      "chunk_id": "gs_driving_review:p18:by_paragraph:4fd929fec584f30a9149bfd6",
+      "source_pdf_page": 18,
+      "source_heading_page": 16,
+      "offset": [
+        0,
+        351
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test04",
+      "rank": 2,
+      "chunk_id": "gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb",
+      "source_pdf_page": 15,
+      "source_heading_page": 14,
+      "offset": [
+        0,
+        818
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test04",
+      "rank": 3,
+      "chunk_id": "gs_driving_review:p21:by_paragraph:e017e155011f028e2a7366c3",
+      "source_pdf_page": 21,
+      "source_heading_page": 20,
+      "offset": [
+        1841,
+        2685
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test05",
+      "rank": 1,
+      "chunk_id": "gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386",
+      "source_pdf_page": 21,
+      "source_heading_page": 21,
+      "offset": [
+        307,
+        1227
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test05",
+      "rank": 2,
+      "chunk_id": "gs_driving_review:p5:by_paragraph:f95dc903441b9b3bf718c288",
+      "source_pdf_page": 5,
+      "source_heading_page": 4,
+      "offset": [
+        0,
+        779
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    },
+    {
+      "strategy": "C",
+      "question_id": "test05",
+      "rank": 3,
+      "chunk_id": "gs_general_survey:p20:by_paragraph:d2a956cd1e7719a397496f43",
+      "source_pdf_page": 20,
+      "source_heading_page": 20,
+      "offset": [
+        1543,
+        2431
+      ],
+      "source_text_and_section_verified": true,
+      "requested_filter_match": null,
+      "issues": []
+    }
+  ],
+  "grading_files_sha256": {
+    "coherence.csv": "eabdd60fe7a9933f8cd5cd1b1970c161cca9ad484dacf202af5c2df4d5eca4a3",
+    "metadata.csv": "7e150300a934a854d4bf54d67130abb43a09d8a21fe4f42b7fc741ffaa84a86b",
+    "grounding.csv": "4a3a1f8701c202715a0d717b49550171e9a904a6cc867080c868941f445bc035",
+    "evidence_review.csv": "9e7b2374a43c02866919fecfeb6706a7bf3f17e14070e6466a91cc74b57c0459"
+  },
+  "automatic_metrics_modified": false,
+  "benchmark_modified": false,
+  "parameters_tuned": false,
+  "display_label_change": "Reviewer name standardized for presentation; AI assistance remains disclosed; scores, reasons, source fields and automatic metrics are unchanged.",
+  "original_review_archive": "results/audit/review_history/original_20261113"
+}

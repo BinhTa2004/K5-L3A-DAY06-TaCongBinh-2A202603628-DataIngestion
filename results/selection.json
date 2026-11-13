@@ -1,0 +1,88 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "selected_at": "2026-11-13T17:37:10.732324+07:00",
+  "selected_strategy": "C",
+  "test_used_for_selection": false,
+  "prior_test_exposure_exists": false,
+  "dev_ranking": [
+    {
+      "strategy": "C",
+      "split": "dev",
+      "questions": 15,
+      "hit_at_1_n": 8,
+      "hit_at_1": 0.5333333333333333,
+      "hit_at_1_fraction": "8/15",
+      "evidence_hit_at_3_n": 12,
+      "evidence_hit_at_3": 0.8,
+      "evidence_hit_at_3_fraction": "12/15",
+      "filter_questions": 3,
+      "filter_compliant_questions": 3,
+      "filter_compliance": 1.0,
+      "search_seconds": 0.05171169999448466
+    },
+    {
+      "strategy": "A",
+      "split": "dev",
+      "questions": 15,
+      "hit_at_1_n": 7,
+      "hit_at_1": 0.4666666666666667,
+      "hit_at_1_fraction": "7/15",
+      "evidence_hit_at_3_n": 12,
+      "evidence_hit_at_3": 0.8,
+      "evidence_hit_at_3_fraction": "12/15",
+      "filter_questions": 3,
+      "filter_compliant_questions": 0,
+      "filter_compliance": 0.0,
+      "search_seconds": 0.0595924000008381
+    },
+    {
+      "strategy": "B",
+      "split": "dev",
+      "questions": 15,
+      "hit_at_1_n": 8,
+      "hit_at_1": 0.5333333333333333,
+      "hit_at_1_fraction": "8/15",
+      "evidence_hit_at_3_n": 11,
+      "evidence_hit_at_3": 0.7333333333333333,
+      "evidence_hit_at_3_fraction": "11/15",
+      "filter_questions": 3,
+      "filter_compliant_questions": 0,
+      "filter_compliance": 0.0,
+      "search_seconds": 0.05310019999888027
+    }
+  ],
+  "selection_rule": [
+    "Highest dev Evidence Hit@3",
+    "Then highest dev Hit@1",
+    "Then lowest measured ingestion time under the same timing procedure",
+    "Then fewest chunks",
+    "Then lexicographic strategy name for a deterministic tie"
+  ],
+  "timing_definition": "Cached-vector validation/conversion and first PostgreSQL snapshot transaction; same procedure per strategy; no embedding/model load",
+  "ingest_timings_at_selection": {
+    "A": {
+      "rows": 219,
+      "first_upsert_seconds": 0.222644,
+      "reload_row_count": 219,
+      "idempotent": true
+    },
+    "B": {
+      "rows": 229,
+      "first_upsert_seconds": 0.198154,
+      "reload_row_count": 229,
+      "idempotent": true
+    },
+    "C": {
+      "rows": 229,
+      "first_upsert_seconds": 0.18134,
+      "reload_row_count": 229,
+      "idempotent": true
+    }
+  },
+  "ingest_report_sha256_at_selection": "caa21cf95033d5a59401ea2357363431b436d349c60b14c673ad0a7892557508",
+  "dev_trace_sha256": {
+    "results/traces/dev_A.jsonl": "2f59fe7f56b5c3be48853cb90722f6a87324d09f683a63f35a7f3baeab559da1",
+    "results/traces/dev_B.jsonl": "1be8c25e10c0bcd60c51332d0913257b1c03faa95261a1099e0922a6900b7f30",
+    "results/traces/dev_C.jsonl": "666a6c36782540ae6b3f9babd31416fa1af637e6b7f5059efdff1ba8a74f39ed"
+  }
+}

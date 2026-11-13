@@ -1,0 +1,35 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "recorded_at": "2026-11-13T17:45:33.586754+07:00",
+  "strategies": {
+    "A": {
+      "rows": 219,
+      "first_upsert_seconds": 0.178795,
+      "reload_row_count": 219,
+      "idempotent": true
+    },
+    "B": {
+      "rows": 229,
+      "first_upsert_seconds": 0.171545,
+      "reload_row_count": 229,
+      "idempotent": true
+    },
+    "C": {
+      "rows": 229,
+      "first_upsert_seconds": 0.173604,
+      "reload_row_count": 229,
+      "idempotent": true
+    }
+  },
+  "backend": {
+    "database": "day6_lab",
+    "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector_version": "0.8.7",
+    "schema": "day06",
+    "dimensions": 384,
+    "metric": "cosine",
+    "search": "exact sequential scan; no ANN index"
+  },
+  "reconnect_verified": true,
+  "timing_scope": "Cached-vector validation/conversion and first PostgreSQL snapshot transaction; same procedure per strategy; no embedding/model load"
+}

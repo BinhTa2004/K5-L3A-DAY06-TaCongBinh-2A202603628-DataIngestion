@@ -1,0 +1,238 @@
+{
+  "status": "pass",
+  "recorded_at": "2026-11-13T17:13:25.769766+07:00",
+  "python": "3.12.9",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "config_sha256": "f3512250cfa22c743b162690689838ab82b69896a03afdbfffa245a0b258e029",
+  "corpus_sha256": "3a3bd244363a83dd71b60a41b3883cd1eeee160206faf8212ce9ce4ebcc697b6",
+  "chunk_config_sha256": "5f4ed62e7025003b5313512b4f6a50cc0aa7ca8d7661424e4fc7d872ae3fd508",
+  "model": {
+    "provider": "local_sentence_transformers",
+    "model_name": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "model_path": "models/multilingual-e5-small",
+    "model_card": "https://huggingface.co/intfloat/multilingual-e5-small",
+    "dimensions": 384,
+    "max_seq_length": 512,
+    "document_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalize_embeddings": true,
+    "precision": "float32",
+    "device": "cpu",
+    "batch_size": 16,
+    "cpu_threads": 4,
+    "truncation_policy": "Reject overlength inputs before encoding; never silently truncate",
+    "paid_api_cost_usd": 0,
+    "cost_scope": "No paid API calls. Local electricity/hardware and network costs are not estimated.",
+    "query_inputs": "question text only, never gold answer/source/page/evidence/filter fields",
+    "shared_across_strategies": [
+      "A",
+      "B",
+      "C"
+    ],
+    "load_and_verify_seconds": 16.117203,
+    "versions": {
+      "sentence-transformers": "5.6.0",
+      "torch": "2.6.0+cu124",
+      "transformers": "4.52.3",
+      "numpy": "2.0.2",
+      "safetensors": "0.5.3"
+    },
+    "model_files": [
+      {
+        "path": "1_Pooling/config.json",
+        "bytes": 200,
+        "sha256": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0"
+      },
+      {
+        "path": "README.md",
+        "bytes": 497538,
+        "sha256": "0038de97aee16258cecbad7ffda4b4febd6953e747a00e0ddbc8e6ed241e9c1c"
+      },
+      {
+        "path": "config.json",
+        "bytes": 655,
+        "sha256": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 470641600,
+        "sha256": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477"
+      },
+      {
+        "path": "modules.json",
+        "bytes": 387,
+        "sha256": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04"
+      },
+      {
+        "path": "sentence_bert_config.json",
+        "bytes": 57,
+        "sha256": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529"
+      },
+      {
+        "path": "sentencepiece.bpe.model",
+        "bytes": 5069051,
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "bytes": 167,
+        "sha256": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 17082730,
+        "sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 443,
+        "sha256": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      }
+    ],
+    "document_and_query_processing": "Same pinned encoder and mean pooling with E5 role prefixes; L2 normalized float32 vectors",
+    "calls": [
+      {
+        "role": "document",
+        "inputs": 219,
+        "tokens": 42110,
+        "min_tokens": 8,
+        "max_tokens": 416,
+        "seconds": 15.993517,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      },
+      {
+        "role": "document",
+        "inputs": 229,
+        "tokens": 42138,
+        "min_tokens": 8,
+        "max_tokens": 397,
+        "seconds": 21.010261,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      },
+      {
+        "role": "query",
+        "inputs": 20,
+        "tokens": 580,
+        "min_tokens": 22,
+        "max_tokens": 38,
+        "seconds": 0.541188,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      }
+    ]
+  },
+  "documents": {
+    "A": {
+      "vectors_path": "data/processed/embeddings/documents_A.npy",
+      "sha256": "eb50c542158fa9d494c39a093a90d4cf8132c12eeab8e19df2f95ac321db52c5",
+      "ids_path": "data/processed/embeddings/documents_A_ids.json",
+      "ids_sha256": "8f761be1c707393a5abb66e1cecae62d4f5c4b0fa5b19a4611e20554113011c8",
+      "shape": [
+        219,
+        384
+      ],
+      "dtype": "float32",
+      "all_finite": true,
+      "max_norm_error": 1.1920928955078125e-07,
+      "chunks_sha256": "535f9914f26a8d2b04007c022060994c2fbed91dc70b9f67103b1a5891f766ca",
+      "encoding": {
+        "role": "document",
+        "inputs": 219,
+        "tokens": 42110,
+        "min_tokens": 8,
+        "max_tokens": 416,
+        "seconds": 15.993517,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      }
+    },
+    "B": {
+      "vectors_path": "data/processed/embeddings/documents_B.npy",
+      "sha256": "0202e72798a185698170b09ad0f0f28a58ccc177bee244de91140223bd33e7df",
+      "ids_path": "data/processed/embeddings/documents_B_ids.json",
+      "ids_sha256": "11ae06b1a5bee40793a078467a1c2b75a4d51bcc810ba78d686d32ff474f5773",
+      "shape": [
+        229,
+        384
+      ],
+      "dtype": "float32",
+      "all_finite": true,
+      "max_norm_error": 1.1920928955078125e-07,
+      "chunks_sha256": "5b16720d905f46a6492d0887c6e8a90b004c59220689c494f6c3213c87b974c1",
+      "encoding": {
+        "role": "document",
+        "inputs": 229,
+        "tokens": 42138,
+        "min_tokens": 8,
+        "max_tokens": 397,
+        "seconds": 21.010261,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      }
+    },
+    "C": {
+      "vectors_path": "data/processed/embeddings/documents_B.npy",
+      "sha256": "0202e72798a185698170b09ad0f0f28a58ccc177bee244de91140223bd33e7df",
+      "ids_path": "data/processed/embeddings/documents_B_ids.json",
+      "ids_sha256": "11ae06b1a5bee40793a078467a1c2b75a4d51bcc810ba78d686d32ff474f5773",
+      "shape": [
+        229,
+        384
+      ],
+      "dtype": "float32",
+      "all_finite": true,
+      "max_norm_error": 1.1920928955078125e-07,
+      "chunks_sha256": "5b16720d905f46a6492d0887c6e8a90b004c59220689c494f6c3213c87b974c1",
+      "encoding": null,
+      "reused_from": "B",
+      "reference_encoding": {
+        "role": "document",
+        "inputs": 229,
+        "tokens": 42138,
+        "min_tokens": 8,
+        "max_tokens": 397,
+        "seconds": 21.010261,
+        "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+        "paid_api_cost_usd": 0
+      },
+      "incremental_document_encoding_seconds": 0,
+      "timing_note": "References the already encoded B matrix; not a standalone ingest benchmark"
+    }
+  },
+  "queries": {
+    "vectors_path": "data/processed/embeddings/queries.npy",
+    "sha256": "a09933b9a9231d12b217df875a1e3952218fb27ef278d396dd23408b07014288",
+    "ids_path": "data/processed/embeddings/queries_ids.json",
+    "ids_sha256": "dc9cabe87f235567aeac7c606ff1c68b93bb18b33786c2ba140dff740966e8a8",
+    "shape": [
+      20,
+      384
+    ],
+    "dtype": "float32",
+    "all_finite": true,
+    "max_norm_error": 5.960464477539063e-08,
+    "input_field": "question only",
+    "source_sha256": {
+      "dev": "72057eccb6619900384db6fe8fddd0cb18d4828c3a61f85df9c1948262475a10",
+      "test": "37771dea78e2563609262bb7736bb3daf51746f5fbed2932123c6b73cbf86c61"
+    },
+    "encoding": {
+      "role": "query",
+      "inputs": 20,
+      "tokens": 580,
+      "min_tokens": 22,
+      "max_tokens": 38,
+      "seconds": 0.541188,
+      "timing_scope": "Token validation, encoding and vector validation; excludes model load and output IO",
+      "paid_api_cost_usd": 0
+    },
+    "note": "Pure query encoding; no retrieval/ranking/evaluation or parameter selection using test results"
+  },
+  "paid_api_cost_usd": 0,
+  "cost_scope": "No paid API calls. Local electricity/hardware and network costs are not estimated.",
+  "vector_store_created": false,
+  "retrieval_executed": false
+}

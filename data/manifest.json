@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "corpus_version": "gs-papers-v1",
+  "topic": "3D Gaussian Splatting: principles, improvements and applications",
+  "page_numbering": "One-based physical PDF page numbers; never renumbered after selection.",
+  "page_counting_rule": "Count each selected physical page once when it contains substantive topic-related prose, equations, figures or tables. No duplicate padding. Exclude reference-only/title-only/blank pages and the explicitly listed out-of-scope pages. Character count is an audit field, not a minimum PDF-page threshold.",
+  "content_page_count": 46,
+  "total_characters": 165772,
+  "normalization": "pypdf extraction followed by NFC, normalized whitespace and preserved line/paragraph breaks; no OCR, header/footer deletion, formula reconstruction or automatic dehyphenation.",
+  "pypdf_version": "6.21.4",
+  "pages_path": "data/processed/pages.jsonl",
+  "pages_sha256": "3a3bd244363a83dd71b60a41b3883cd1eeee160206faf8212ce9ce4ebcc697b6",
+  "sections_path": "data/processed/sections.jsonl",
+  "sections_sha256": "d51effa30a8a52e7985f9044a7537dd67e4ef542c10aa418a4011a1e357d8469",
+  "section_boundaries_path": "data/section_boundaries.json",
+  "section_boundaries_sha256": "72c4b89495fe7f84ffda983e7d832931c09a469ab3378b10d554d28047a04282",
+  "machine_audit": "results/corpus_checks.json",
+  "visual_audit": "results/text_audit.csv",
+  "quality_limits": [
+    "Only eight representative pages were inspected visually; all 46 were checked mechanically against PDF extraction.",
+    "Tables/figures/formulas lose two-dimensional layout; running headers/footers and line-end hyphenation remain.",
+    "Some selected pages start/end mid-paragraph or mid-section; benchmark evidence must be self-contained.",
+    "Artifacts are prepared locally; this manifest does not assert blanket permission to publish adapted text, excerpts or third-party images."
+  ],
+  "documents": [
+    {
+      "authors": [
+        "Huixin Zhu",
+        "Zhili Zhang",
+        "Junyang Zhao",
+        "Hui Duan",
+        "Yao Ding",
+        "Xiongwu Xiao",
+        "Junsong Yuan"
+      ],
+      "source_url": "https://doi.org/10.1007/s10462-024-10955-4",
+      "metadata_verification_url": "https://link.springer.com/article/10.1007/s10462-024-10955-4",
+      "version": "Publisher version of record; Artificial Intelligence Review 58, article 30 (2025)",
+      "published_online": "2024-11-30",
+      "license_or_permission": "CC BY-NC-ND 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "license_evidence": "Local PDF physical page 27, Open Access notice; publisher Rights and permissions.",
+      "excluded_parts": [
+        {
+          "pages": [
+            1
+          ],
+          "reason": "Title/author/abstract/affiliation page deliberately outside the chosen snapshot."
+        },
+        {
+          "pages": [
+            27
+          ],
+          "reason": "Conclusion continuation, declarations, license and figure deliberately excluded."
+        },
+        {
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "reason": "Reference-only pages; not counted as content."
+        }
+      ],
+      "source_id": "gs_driving_review",
+      "document_id": "gs_driving_review",
+      "title": "Scene reconstruction techniques for autonomous driving: a review of 3D Gaussian splatting",
+      "source_path": "data/raw/s10462-024-10955-4.pdf",
+      "pdf_sha256": "5f030fc0c3cc7c8fd2916ddc7cb6e5ed8237399091db2d7d496147d90aff057d",
+      "physical_page_count": 33,
+      "selected_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "content_page_count": 25,
+      "page_char_counts": [
+        {
+          "page": 2,
+          "char_count": 4009,
+          "text_sha256": "707f53d31f51b251f1e3635b3a5050aba124f1e306f7836e54f6bb7506369cf6"
+        },
+        {
+          "page": 3,
+          "char_count": 2584,
+          "text_sha256": "d4997807535d1e0e365fd91a5a33c0ddad9b1cb6cc3280bd1534bf5750167232"
+        },
+        {
+          "page": 4,
+          "char_count": 2592,
+          "text_sha256": "0dea745679e93e4f68511f9e8b1bf4eb908578290eaed5fe3ac7da1484bccd22"
+        },
+        {
+          "page": 5,
+          "char_count": 4046,
+          "text_sha256": "d34b48b3b9e26e9b9976ef60999a7d8b823522cc2457712af28e5b9bd2455cc5"
+        },
+        {
+          "page": 6,
+          "char_count": 2884,
+          "text_sha256": "06e4d586be1bcfeebbf8e42bf5fa3f34809ce6f2ce73b680c93e45a30e482b3c"
+        },
+        {
+          "page": 7,
+          "char_count": 3350,
+          "text_sha256": "5d4541075cbc215d8927b7a977503ef35142eb11a150a2d581f9680ffa1e7b7d"
+        },
+        {
+          "page": 8,
+          "char_count": 3172,
+          "text_sha256": "2f3cb6ca9355ab8d93cbe9164550e4103ab24bdb6dbd687a331ae5d2c8c43fd0"
+        },
+        {
+          "page": 9,
+          "char_count": 3108,
+          "text_sha256": "d0efcbd75839cde710365367e66a2a0b6e57e324c7fbc173739809a9b887da04"
+        },
+        {
+          "page": 10,
+          "char_count": 3511,
+          "text_sha256": "5ca2e0d148faa9f9465a86b3317dd115bc1f3ce7362ae1fb40e2b10e1c79d740"
+        },
+        {
+          "page": 11,
+          "char_count": 3245,
+          "text_sha256": "6f02858b679f7717ca0c3fb41b8fb19ec4408192ada7f298f8a1d2af75b3662b"
+        },
+        {
+          "page": 12,
+          "char_count": 3059,
+          "text_sha256": "ea82364023ca3cab366072b37d08313932fce53be813006d922175d11640861e"
+        },
+        {
+          "page": 13,
+          "char_count": 1523,
+          "text_sha256": "a28328b6cf3d3d5c97562551d04f9585142d1e08d094a8e71a0c68c84517411a"
+        },
+        {
+          "page": 14,
+          "char_count": 2955,
+          "text_sha256": "0d3bf2a20a59e0cbd78ed2b7958ee1f8cfbd8c7ec87a37a5302ef05df69542b5"
+        },
+        {
+          "page": 15,
+          "char_count": 2841,
+          "text_sha256": "6681d6340da9199c5fd2accd63109ff2aa207963b0e64ab562fcb55689a62505"
+        },
+        {
+          "page": 16,
+          "char_count": 3882,
+          "text_sha256": "4ba3f61cfe3fa8c28edca11a687f371ad7c1e7ec58bb7a056719166ff899e672"
+        },
+        {
+          "page": 17,
+          "char_count": 3397,
+          "text_sha256": "5cfa377dea8b6f1785026e358fa6c0f8bac486f93470e4374178f49c0c3fc771"
+        },
+        {
+          "page": 18,
+          "char_count": 1848,
+          "text_sha256": "b78f1059671c1f434d3f4c2d5c1c743cdccf79c806d488faadf5406386dad826"
+        },
+        {
+          "page": 19,
+          "char_count": 4158,
+          "text_sha256": "b90d2be83c2735f42ad8c5876433b33e0229c1bfcd3960e4bcc44c547cb6c444"
+        },
+        {
+          "page": 20,
+          "char_count": 3742,
+          "text_sha256": "76852500e009a39d09be375236303d5d8cb33acaaf6912baf3177411a3c23e61"
+        },
+        {
+          "page": 21,
+          "char_count": 3600,
+          "text_sha256": "72adeec8ce7b8bc1e2e486f8e9ae87fbd7978d153573a6752bed1c000d54e416"
+        },
+        {
+          "page": 22,
+          "char_count": 2195,
+          "text_sha256": "5f5fdb5ddb69758f6fecff313b8755f9991755e09215a4ade5b3b8a48d503f60"
+        },
+        {
+          "page": 23,
+          "char_count": 2961,
+          "text_sha256": "093f9248a63e514aaa03dbdc7b4a0bc2f0b89cbb96c8263b3484e70f1f5e41df"
+        },
+        {
+          "page": 24,
+          "char_count": 3669,
+          "text_sha256": "e4beff32e70d254b64cbc6777bd6cd593941c5c282d402a549d101e9303052be"
+        },
+        {
+          "page": 25,
+          "char_count": 2863,
+          "text_sha256": "a6fcd0aea9bc707f0e925538a7ae7dbcbd5659afbb6a0e243d7a7709c97a4503"
+        },
+        {
+          "page": 26,
+          "char_count": 3557,
+          "text_sha256": "b4cb8439cf3a91a2d475a2991804b197b27c5dc8acf25ac945c4bfe92878ed68"
+        }
+      ],
+      "total_characters": 78751,
+      "original_downloaded_at": null,
+      "accessed_at": "2026-11-13",
+      "access_method": "Inspection of user-provided local PDF; not its original download date.",
+      "source_web_verified_at": "2026-11-13",
+      "how_to_obtain": "Obtain the indicated version from source_url/download_url and place the original PDF at source_path; compare pdf_sha256 to detect a different binary."
+    },
+    {
+      "authors": [
+        "Guikun Chen",
+        "Wenguan Wang"
+      ],
+      "source_url": "https://arxiv.org/abs/2401.03890v9",
+      "download_url": "https://arxiv.org/pdf/2401.03890v9",
+      "metadata_verification_url": "https://arxiv.org/abs/2401.03890v9",
+      "version": "arXiv:2401.03890v9",
+      "version_date": "2026-04-09",
+      "license_or_permission": "CC BY 4.0 (arXiv license link and embedded PDF /License metadata)",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": "Version-specific arXiv record, view license; local PDF /License metadata.",
+      "license_notes": "The PDF also contains an ACM template permission notice on page 1; both observations are retained rather than treating it as an unconditional rights clearance.",
+      "excluded_parts": [
+        {
+          "pages": [
+            1
+          ],
+          "reason": "Title/author/abstract/permission and initial introduction page deliberately excluded."
+        },
+        {
+          "pages": [
+            23
+          ],
+          "reason": "Mixed final research discussion/conclusion and start of references deliberately excluded."
+        },
+        {
+          "pages": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "reason": "Reference-only pages; not counted as content."
+        },
+        {
+          "pages": [
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "reason": "Supplementary figures/tables deliberately outside this snapshot."
+        }
+      ],
+      "source_id": "gs_general_survey",
+      "document_id": "gs_general_survey",
+      "title": "A Survey on 3D Gaussian Splatting",
+      "source_path": "data/raw/2401.03890v9.pdf",
+      "pdf_sha256": "c459485396f1922756dd7f3c5d9bf22c4b800265e905d3377045d0e347e1ca9d",
+      "physical_page_count": 41,
+      "selected_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "content_page_count": 21,
+      "page_char_counts": [
+        {
+          "page": 2,
+          "char_count": 4814,
+          "text_sha256": "5bed6a581110f409fa004bb1aa3e7ceddb11f1664cd28ec7c5938820ae2dc04a"
+        },
+        {
+          "page": 3,
+          "char_count": 3714,
+          "text_sha256": "c8b150cb6de82185012beec57f6f3ab83080d719e97f51a5ebcdbf5a0de9bd31"
+        },
+        {
+          "page": 4,
+          "char_count": 2559,
+          "text_sha256": "d95978d47c3a934056757cad58ee542f9cc6c6b2f57f4c0c6e674bb8a8f58c5f"
+        },
+        {
+          "page": 5,
+          "char_count": 4112,
+          "text_sha256": "06a63009a017f31fd6e0162b0b2107b3dcad860a1d53c2890f9b574d9751b2bf"
+        },
+        {
+          "page": 6,
+          "char_count": 3751,
+          "text_sha256": "3f7700fdcebbe01a5e05ade6a55a24626dae2e5cd36a56226e5147496101acd4"
+        },
+        {
+          "page": 7,
+          "char_count": 3838,
+          "text_sha256": "a4b213f3ac91ffeb699a085dfeb3365c3ec1c11ae1f11ec3a68501e4562932b7"
+        },
+        {
+          "page": 8,
+          "char_count": 4271,
+          "text_sha256": "f783e6b22176c8a6a192508a004c78733cdc64d526ace914c5e8bb7eefc37cff"
+        },
+        {
+          "page": 9,
+          "char_count": 4459,
+          "text_sha256": "c9f3f68f1ac9153fac04d9d5f16e6b79e64917e214a0ea5d4f8f9802c4f79fef"
+        },
+        {
+          "page": 10,
+          "char_count": 4209,
+          "text_sha256": "47a00ba4d1d43357c117c24afa3b57e5f085ce178e91ba6f73504e29f3bd92c1"
+        },
+        {
+          "page": 11,
+          "char_count": 4212,
+          "text_sha256": "924aa842e4fa1b7fd9ef8d15384d7584410e5552c45618fae8624580b2e0ca7c"
+        },
+        {
+          "page": 12,
+          "char_count": 4215,
+          "text_sha256": "9a6b4ff036abe535f245b3bfbdc9f418083505cc5d41ea8ea77b9ca5e4413288"
+        },
+        {
+          "page": 13,
+          "char_count": 4344,
+          "text_sha256": "71db02d2f60442470bc07be70916e399cfdca97364ebab143ec179b84971d4f9"
+        },
+        {
+          "page": 14,
+          "char_count": 3691,
+          "text_sha256": "e0c5dcb730ac645250a1d560d23447c54d105504d94ce8f2a4705cb11e37e1ad"
+        },
+        {
+          "page": 15,
+          "char_count": 4454,
+          "text_sha256": "1c7f6807b368e998e9c436411e7d5b22223d0bd6912a61137b4bf3840882c06f"
+        },
+        {
+          "page": 16,
+          "char_count": 4529,
+          "text_sha256": "7fa7239a3b29892a27d19db2aa2d8c929f17a256401cc65758ebd840b71a9a00"
+        },
+        {
+          "page": 17,
+          "char_count": 4325,
+          "text_sha256": "f484cf2ec0783c9494a2f533889a7effd97c495275e4925423ecbe86bfddbd22"
+        },
+        {
+          "page": 18,
+          "char_count": 4531,
+          "text_sha256": "9307f52d57bfd5dcf53731993bc59c0021cfb269897c2271ed221550fef327d3"
+        },
+        {
+          "page": 19,
+          "char_count": 4302,
+          "text_sha256": "47cc366987258570d61e8fd3fa14f373abd58d350757f32aac479bbb1d626d8c"
+        },
+        {
+          "page": 20,
+          "char_count": 3811,
+          "text_sha256": "1788975a80b01295116a057f0d1f00704a1546477bc180754bff62d09973a5e7"
+        },
+        {
+          "page": 21,
+          "char_count": 4140,
+          "text_sha256": "4e6b207775c603da809e8a75672682848d9a1ad46fe9d662bbf8f5ded0a64adf"
+        },
+        {
+          "page": 22,
+          "char_count": 4740,
+          "text_sha256": "6ff2a99d4bf22de7d00e9ef3037a0355c6e9e3070ddde3d15a264bbdad4c2331"
+        }
+      ],
+      "total_characters": 87021,
+      "original_downloaded_at": null,
+      "accessed_at": "2026-11-13",
+      "access_method": "Inspection of user-provided local PDF; not its original download date.",
+      "source_web_verified_at": "2026-11-13",
+      "how_to_obtain": "Obtain the indicated version from source_url/download_url and place the original PDF at source_path; compare pdf_sha256 to detect a different binary."
+    }
+  ]
+}

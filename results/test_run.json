@@ -1,0 +1,6 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "completed_at": "2026-11-13T17:45:34.866260+07:00",
+  "holdout_status": "replay_of_fixed_configuration",
+  "selected_strategy_before_test": "C"
+}

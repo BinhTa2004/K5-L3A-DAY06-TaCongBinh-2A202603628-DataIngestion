@@ -1,0 +1,63 @@
+{
+  "reviewer": "Codex (AI-assisted review)",
+  "review_date": "2026-11-13",
+  "experiment_fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "method": {
+    "coherence": "Read all 30 sampled rows. Score the chunk itself: 0 if no understandable central proposition, 1 if part is intelligible but essential context or boundaries are incomplete, 2 if central propositions are self-contained and complete. Do not grade scientific truth of the original paper as chunk coherence. Identical B/C chunks receive identical judgments.",
+    "metadata": "Check all 45 rows against immutable chunk/trace records, normalized extraction from the original physical PDF page, exact character offsets, and source heading boundaries; inspect representative PDF renderings. Correct provenance is separate from relevance and query-filter compliance.",
+    "grounding": "Read all 15 cases and their complete top-3 against the actual question and expected answer. Score meaning and required facts, allowing sufficient evidence across top-3; do not copy the automatic exact-passage hit flag.",
+    "source_visual_review": "Rendered and inspected driving-review pages 3, 20, 26 and general-survey pages 4, 6, 12, 21. Images retained in results/audit/review_previews/.",
+    "independence": "Single non-blind AI-assisted review by the same assistant that helped implement the pipeline and author the benchmark; potential author/reviewer bias. No student or independent human sign-off is claimed.",
+    "preservation": "Keep corpus, benchmark, code, dev selection and automatic retrieval metrics unchanged. Record any semantic disagreement in a supplementary review. Preserve any pre-existing entered labels."
+  },
+  "coherence": {
+    "A": {
+      "1": {"score": 1, "reason": "Đầu chunk bị cắt thành 'D GS)' và cuối dừng ở 'continuity and microscopicity,'. Các câu giữa vẫn giải thích được rendering/ellipsoid nhưng hai biên thiếu phần ý."},
+      "2": {"score": 1, "reason": "Mở đầu 'e of each point. This method' thiếu chủ thể/tiền đề, cuối cắt giữa từ 'aut'. Một số câu về ứng dụng và mục đích survey vẫn hiểu được nên chấm một phần."},
+      "3": {"score": 1, "reason": "Có heading và các định nghĩa tự hiểu về tái dựng 3D, active/passive; tuy nhiên cuối dừng giữa 'Representative metho', làm phần liệt kê tiếp theo bị mất."},
+      "4": {"score": 1, "reason": "Đầu 'o categories' bị mất mệnh đề phân loại MVS, cuối cắt giữa 'depth estimation metho'. Phần giữa vẫn nêu được đặc điểm non-deep/deep MVS nhưng chưa giữ trọn mạch."},
+      "5": {"score": 1, "reason": "Bắt đầu bằng 'and a loss function' là phần cuối một danh sách không có đủ bốn mục/chủ thể. Các câu tiếp về positional coding, sampling và giới hạn NeRF khá rõ nhưng đầu đoạn thiếu ngữ cảnh."},
+      "6": {"score": 1, "reason": "Đầu cắt từ 'while' thành 'hile'; đoạn giới thiệu khả năng rendering 3D GS ở giữa vẫn rõ. Cuối dừng ở 'geometries and', thiếu phần tiếp của câu."},
+      "7": {"score": 2, "reason": "Heading BACKGROUND đi cùng các câu hoàn chỉnh nêu phạm vi mục 2.1/2.2 và liên hệ radiance fields/rendering. Là đoạn giới thiệu mục ngắn nhưng tự hiểu và kết thúc trọn câu."},
+      "8": {"score": 1, "reason": "Mở bằng phần tiếp 'functions, such as ...' thiếu tiền đề; bullet về 3D GS vẫn có nội dung độc lập. Cuối dừng ở 'particularly for complex', thiếu đối tượng và kết luận câu."},
+      "9": {"score": 1, "reason": "Chunk bắt đầu bằng dấu phẩy và 'requiring expensive sampling' nên mất chủ thể NeRF của so sánh. Câu sau về rasterization/parallelism hiểu được, nhưng lập luận so sánh chỉ còn một phần."},
+      "10": {"score": 1, "reason": "Đầu lẫn mảnh caption 'one in parallel. Best viewed in color.' và phần tiếp non-Lambertian không có câu dẫn. Frustum culling/splatting có đoạn đọc được nhưng cuối cắt 'the 2D cov'."}
+    },
+    "B": {
+      "1": {"score": 2, "reason": "Các câu đầy đủ nối giới hạn tài nguyên/rendering của NeRF với biểu diễn và lợi ích 3D GS. Chủ thể rõ, đoạn kết thúc sau mệnh đề hỗ trợ autonomous driving."},
+      "2": {"score": 2, "reason": "Nêu rõ 3D GS, cách biểu diễn, lợi ích xử lý point cloud rồi chuyển sang mục đích survey bằng các câu hoàn chỉnh. Không cắt từ hoặc mất phần kết luận của các ý chính."},
+      "3": {"score": 2, "reason": "Giữ heading, định nghĩa tái dựng cảnh, phân loại active/passive và lợi ích passive trong các câu trọn vẹn; không còn mảnh 'Representative methods' bị cắt như A."},
+      "4": {"score": 2, "reason": "Có chủ thể MVS ngay câu đầu, nêu đủ hai nhóm, các biểu diễn hình học và cách non-deep MVS sử dụng feature/matching/optimization. Đoạn giữ các câu hoàn chỉnh."},
+      "5": {"score": 2, "reason": "Liệt kê đủ bốn phần của NeRF rồi giải thích positional coding, sampling và hạn chế của NeRF. Tham chiếu Fig. 3 không làm mất nghĩa vì nội dung cần thiết đã được mô tả bằng text."},
+      "6": {"score": 2, "reason": "Ý về learnable Gaussians và giảm overhead được nối với đoạn nêu rõ 3D GS, real-time rendering và ứng dụng. Chủ thể được giải nghĩa ngay trong chunk, các mệnh đề chính kết thúc đầy đủ."},
+      "7": {"score": 2, "reason": "Cùng nội dung heading và đoạn giới thiệu BACKGROUND như A: phạm vi rõ, các câu trọn vẹn và không cần chunk khác để hiểu mục đích đoạn."},
+      "8": {"score": 1, "reason": "Phần chính về 3D GS khá rõ và kết thúc trọn câu, nhưng đầu lẫn caption 'Structure of the overall review' rồi 'one is directly storing' là phần tiếp từ trang trước, chưa tự hiểu hoàn toàn."},
+      "9": {"score": 2, "reason": "Giữ đầy đủ so sánh point-based alpha-blending với NeRF, giải thích lấy mẫu dọc tia và lợi ích rasterization/parallelism. Chủ thể và lập luận nằm trọn trong chunk."},
+      "10": {"score": 1, "reason": "Frustum culling và splatting được mô tả trọn câu; tuy nhiên đầu vẫn là caption hình rồi mảnh tiếp non-Lambertian từ trang trước, thiếu câu dẫn của phần màu/SH. Không chấm 2 chỉ vì hết ở biên câu."}
+    },
+    "C": {"reuse_labels_from": "B", "condition": "Same anchor, chunk_id and chunk_text must be identical; metadata filtering does not change chunk coherence."}
+  },
+  "grounding": {
+    "A": {
+      "test01": {"score": 0, "single_chunk_sufficient_rank": null, "reason": "Top-3 nói về style transfer, chất lượng/tốc độ rendering và ứng dụng chung. Không có mệnh đề giải thích vì sao phải mô hình hóa thời gian để biểu diễn cảnh thay đổi; nhắc scene dynamics chung chưa đủ bằng chứng trả lời."},
+      "test02": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1, gs_driving_review trang 26, đã nêu đủ sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation. Phần lợi ích sau danh sách bị cắt nhưng câu hỏi chỉ hỏi ba giai đoạn; có đủ bằng chứng và nguồn. Auto miss là do yêu cầu chứa toàn bộ quote dài hơn."},
+      "test03": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 20 nói trực tiếp SplaTAM dùng view-independent colors và Gaussian isotropic, đủ cả hai yêu cầu. Hai kết quả ngoài mục được ghi thành lỗi filter riêng, không xóa giá trị bằng chứng đầy đủ của rank 1."},
+      "test04": {"score": 0, "single_chunk_sufficient_rank": null, "reason": "Các đoạn đề cập Deformable 3D Gaussians và biểu diễn cảnh động, không nêu PhysGaussian hay liên hệ mô phỏng cơ học với Gaussian. Không suy đáp án cho một phương pháp cụ thể chỉ từ từ khóa Gaussian chung."},
+      "test05": {"score": 2, "single_chunk_sufficient_rank": 2, "reason": "Rank 2, gs_general_survey trang 21, có heading Surgical Scenes và câu Evaluation Metric nêu PSNR, SSIM, LPIPS. Đủ đáp án và ngữ cảnh phẫu thuật dù rank 1 lệch chủ đề."}
+    },
+    "B": {
+      "test01": {"score": 1, "single_chunk_sufficient_rank": null, "reason": "Rank 1 trang 12 nhắc annealing smoothing để tăng temporal smoothness, là bằng chứng liên quan một phần đến thời gian. Top-3 không giải thích trực tiếp việc biểu diễn cảnh/vật thể thay đổi theo thời gian, nên chưa đủ trả lời đầy đủ."},
+      "test02": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 26 giữ nguyên câu liệt kê đủ ba giai đoạn GaussNav cùng ngữ cảnh điều hướng; nguồn và trang rõ. Các đoạn còn lại bổ sung bối cảnh, không cần để hoàn thành đáp án."},
+      "test03": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 20 xác định SplaTAM và nêu đủ màu view-independent, Gaussian isotropic. Top-3 có bằng chứng đầy đủ; hai chunk khác mục không thay thế việc chấm đúng metadata/filter riêng."},
+      "test04": {"score": 0, "single_chunk_sufficient_rank": null, "reason": "Top-3 thuộc Deformable 3D Gaussians, dynamic scene reconstruction và DrivingGaussian/PVG; không có bằng chứng về PhysGaussian hay cách mô phỏng cơ học của nó."},
+      "test05": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 21 giữ heading Performance Benchmarking: Surgical Scenes và danh sách PSNR, SSIM, LPIPS. Đủ nội dung trả lời và truy nguồn, không cần suy từ benchmark cảnh động."}
+    },
+    "C": {
+      "test01": {"score": 1, "single_chunk_sufficient_rank": null, "reason": "Câu không có filter nên top-3 giống B. Chỉ đoạn temporal smoothness liên quan một phần; thiếu giải thích trực tiếp vì sao phải mô hình hóa thời gian cho cảnh thay đổi."},
+      "test02": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 26 nêu đủ ba giai đoạn GaussNav; toàn bộ top-3 đúng mục Vehicle navigation đã yêu cầu. Bằng chứng và truy nguồn đầy đủ."},
+      "test03": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Rank 1 trang 20 nêu đủ hai đơn giản hóa của SplaTAM; filter giữ cả ba kết quả trong mục Simultaneous localization and mapping. Các bảng/kết quả khác không cần dùng để suy hai thuộc tính này."},
+      "test04": {"score": 0, "single_chunk_sufficient_rank": null, "reason": "Không có filter và top-3 giống B; các phương pháp Deformable/DrivingGaussian không cung cấp bằng chứng về phương pháp PhysGaussian được hỏi."},
+      "test05": {"score": 2, "single_chunk_sufficient_rank": 1, "reason": "Câu không có filter nên top-3 giống B. Rank 1 có đúng ngữ cảnh Surgical Scenes và cả ba metric PSNR, SSIM, LPIPS; đủ để trả lời và truy nguồn."}
+    }
+  }
+}

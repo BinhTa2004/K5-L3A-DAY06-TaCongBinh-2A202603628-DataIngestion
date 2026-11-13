@@ -1,0 +1,147 @@
+[
+  {
+    "id": "test01",
+    "split": "test",
+    "question": "Để mở rộng 3D GS sang cảnh động, vì sao cần mô hình hóa thêm chiều thời gian?",
+    "expected_answer": "Để biểu diễn sự thay đổi của cảnh hoặc vật thể theo thời gian và nắm bắt động lực chuyển động.",
+    "topic": "dynamic_temporal_dimension",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 14,
+    "evidence_quote": "The key to adapt 3D GS to dynamic scenes is the modeling of temporal dimension which allows for the representation\nof scenes that change over time.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 14,
+        "evidence_quote": "The key to adapt 3D GS to dynamic scenes is the modeling of temporal dimension which allows for the representation\nof scenes that change over time.",
+        "evidence_start": 3307,
+        "evidence_end": 3454,
+        "section": "Dynamic Scene Reconstruction"
+      },
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 24,
+        "evidence_quote": "4D scene reconstruction techniques\nrequire high-quality reconstruction of 3D spatial structures by in-vehicle systems and must\nconsider variations in the temporal dimension to capture the complex dynamics of rigidly\nmoving objects.",
+        "evidence_start": 2464,
+        "evidence_end": 2695,
+        "section": "4D scene reconstruction"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "test02",
+    "split": "test",
+    "question": "Trong mục Vehicle navigation, GaussNav sử dụng ba giai đoạn chính nào?",
+    "expected_answer": "Sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation.",
+    "topic": "gaussnav_stages",
+    "filter": {
+      "section": "Vehicle navigation"
+    },
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 26,
+    "evidence_quote": "GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian\nconstruction, and Gaussian navigation to efficiently localize the target object and signifi-\ncantly improve the performance.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 26,
+        "evidence_quote": "GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian\nconstruction, and Gaussian navigation to efficiently localize the target object and signifi-\ncantly improve the performance.",
+        "evidence_start": 2878,
+        "evidence_end": 3086,
+        "section": "Vehicle navigation"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "test03",
+    "split": "test",
+    "question": "Trong mục Simultaneous localization and mapping, SplaTAM đơn giản hóa màu và phân bố Gaussian như thế nào?",
+    "expected_answer": "Chỉ dùng màu không phụ thuộc góc nhìn và làm phân bố Gaussian đẳng hướng (isotropic).",
+    "topic": "splatam_simplifications",
+    "filter": {
+      "section": "Simultaneous localization and mapping"
+    },
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 20,
+    "evidence_quote": "SplaTAM streamlines the architecture of the\nunderlying 3D GS using only view-independent colors and making the Gaussian distribu-\ntion isotropic.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 20,
+        "evidence_quote": "SplaTAM streamlines the architecture of the\nunderlying 3D GS using only view-independent colors and making the Gaussian distribu-\ntion isotropic.",
+        "evidence_start": 3409,
+        "evidence_end": 3554,
+        "section": "Simultaneous localization and mapping"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "test04",
+    "split": "test",
+    "question": "PhysGaussian gắn mô phỏng cơ học vào loại biểu diễn cảnh nào?",
+    "expected_answer": "Biểu diễn bằng các Gaussian 3D (Gaussian bodies), được dùng để gắn trạng thái cơ học với biểu diễn/rendering cảnh.",
+    "topic": "physgaussian_representation",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 18,
+    "evidence_quote": "In PhysGaussian [272], for instance, the same Gaussian\nset is used for both continuum-mechanics-based time integration and for splatting, so physical states evolve on\nexactly what is rendered.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 18,
+        "evidence_quote": "In PhysGaussian [272], for instance, the same Gaussian\nset is used for both continuum-mechanics-based time integration and for splatting, so physical states evolve on\nexactly what is rendered.",
+        "evidence_start": 3179,
+        "evidence_end": 3371,
+        "section": "Physics"
+      },
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 26,
+        "evidence_quote": "PhysGaussian\nemploys a particular material-pointing method to incorporate the mechanical properties into\nthe Gaussian body,",
+        "evidence_start": 982,
+        "evidence_end": 1105,
+        "section": "Vehicle navigation"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "test05",
+    "split": "test",
+    "question": "Benchmark tái dựng cảnh phẫu thuật sử dụng ba chỉ số chất lượng hình ảnh nào?",
+    "expected_answer": "PSNR, SSIM và LPIPS.",
+    "topic": "surgical_metrics",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 21,
+    "evidence_quote": "• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 21,
+        "evidence_quote": "• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.",
+        "evidence_start": 1015,
+        "evidence_end": 1097,
+        "section": "Performance Benchmarking: Surgical Scenes"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  }
+]

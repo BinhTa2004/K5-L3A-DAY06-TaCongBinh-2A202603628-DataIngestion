@@ -1,0 +1,6 @@
+phase,strategy,model,revision,inputs,tokens,seconds,paid_api_cost_usd,scope
+model_load_and_verify,shared,intfloat/multilingual-e5-small,614241f622f53c4eeff9890bdc4f31cfecc418b3,,,16.117203,0,"Shared initialization, file checks and imports; not per-strategy encoding"
+document_encoding,A,intfloat/multilingual-e5-small,614241f622f53c4eeff9890bdc4f31cfecc418b3,219,42110,15.993517,0,"Token validation, encoding and vector validation; excludes model load and output IO"
+document_encoding,B,intfloat/multilingual-e5-small,614241f622f53c4eeff9890bdc4f31cfecc418b3,229,42138,21.010261,0,"Token validation, encoding and vector validation; excludes model load and output IO"
+document_encoding,C,intfloat/multilingual-e5-small,614241f622f53c4eeff9890bdc4f31cfecc418b3,229,0,0,0,Incremental reuse of B vectors; not an independent standalone ingest timing
+query_encoding,shared,intfloat/multilingual-e5-small,614241f622f53c4eeff9890bdc4f31cfecc418b3,20,580,0.541188,0,"Token validation, encoding and vector validation; excludes model load and output IO"

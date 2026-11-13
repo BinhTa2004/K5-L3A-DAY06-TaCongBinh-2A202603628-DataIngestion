@@ -1,0 +1,101 @@
+{
+  "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+  "manual_review_complete": true,
+  "audits": {
+    "coherence": {
+      "A": {
+        "labeled": 10,
+        "sample_size": 10,
+        "complete": true,
+        "mean": 1.1,
+        "label_counts": {
+          "1": 9,
+          "2": 1
+        }
+      },
+      "B": {
+        "labeled": 10,
+        "sample_size": 10,
+        "complete": true,
+        "mean": 1.8,
+        "label_counts": {
+          "2": 8,
+          "1": 2
+        }
+      },
+      "C": {
+        "labeled": 10,
+        "sample_size": 10,
+        "complete": true,
+        "mean": 1.8,
+        "label_counts": {
+          "2": 8,
+          "1": 2
+        }
+      }
+    },
+    "metadata": {
+      "A": {
+        "labeled": 15,
+        "sample_size": 15,
+        "complete": true,
+        "mean": 1.0,
+        "label_counts": {
+          "1": 15
+        }
+      },
+      "B": {
+        "labeled": 15,
+        "sample_size": 15,
+        "complete": true,
+        "mean": 1.0,
+        "label_counts": {
+          "1": 15
+        }
+      },
+      "C": {
+        "labeled": 15,
+        "sample_size": 15,
+        "complete": true,
+        "mean": 1.0,
+        "label_counts": {
+          "1": 15
+        }
+      }
+    },
+    "grounding": {
+      "A": {
+        "labeled": 5,
+        "sample_size": 5,
+        "complete": true,
+        "mean": 1.2,
+        "label_counts": {
+          "0": 2,
+          "2": 3
+        }
+      },
+      "B": {
+        "labeled": 5,
+        "sample_size": 5,
+        "complete": true,
+        "mean": 1.4,
+        "label_counts": {
+          "1": 1,
+          "2": 3,
+          "0": 1
+        }
+      },
+      "C": {
+        "labeled": 5,
+        "sample_size": 5,
+        "complete": true,
+        "mean": 1.4,
+        "label_counts": {
+          "1": 1,
+          "2": 3,
+          "0": 1
+        }
+      }
+    }
+  }
+}

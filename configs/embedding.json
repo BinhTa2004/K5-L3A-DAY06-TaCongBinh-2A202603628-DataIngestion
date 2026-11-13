@@ -1,0 +1,21 @@
+{
+  "provider": "local_sentence_transformers",
+  "model_name": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "model_path": "models/multilingual-e5-small",
+  "model_card": "https://huggingface.co/intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "max_seq_length": 512,
+  "document_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalize_embeddings": true,
+  "precision": "float32",
+  "device": "cpu",
+  "batch_size": 16,
+  "cpu_threads": 4,
+  "truncation_policy": "Reject overlength inputs before encoding; never silently truncate",
+  "paid_api_cost_usd": 0,
+  "cost_scope": "No paid API calls. Local electricity/hardware and network costs are not estimated.",
+  "query_inputs": "question text only, never gold answer/source/page/evidence/filter fields",
+  "shared_across_strategies": ["A", "B", "C"]
+}

@@ -1,4 +1,6 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup/PDF parsing; local embedding dependencies are in requirements-embeddings.txt.
 psycopg[binary]==3.3.8
 pypdf>=5,<7
+# Parse embedded CFF Type1 font encodings in the selected PDFs.
+fonttools>=4,<5
 python-dotenv>=1,<2

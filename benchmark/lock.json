@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "gs-benchmark-v1",
+  "frozen_on": "2026-11-13",
+  "timezone": "Asia/Barnaul",
+  "frozen_before_retrieval": true,
+  "sha256": {
+    "benchmark/dev.json": "72057eccb6619900384db6fe8fddd0cb18d4828c3a61f85df9c1948262475a10",
+    "benchmark/test.json": "37771dea78e2563609262bb7736bb3daf51746f5fbed2932123c6b73cbf86c61",
+    "data/processed/pages.jsonl": "3a3bd244363a83dd71b60a41b3883cd1eeee160206faf8212ce9ce4ebcc697b6",
+    "data/processed/sections.jsonl": "d51effa30a8a52e7985f9044a7537dd67e4ef542c10aa418a4011a1e357d8469",
+    "data/section_boundaries.json": "72c4b89495fe7f84ffda983e7d832931c09a469ab3378b10d554d28047a04282",
+    "data/manifest.json": "6c27bcb510d2b5e4c19925a8bc90afb69e29e3136a678fa66dbff795279e802e",
+    "benchmark/protocol.json": "758280af61fbf58631ed03168b4735597616ba2960d2aa09e521a8a828310880",
+    "benchmark/README.md": "23317f9d0460b2ea8a8e7f5d8241867410076fe5c66ee3612b0dedd55619f652"
+  }
+}

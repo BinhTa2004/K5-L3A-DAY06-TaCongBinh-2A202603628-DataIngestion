@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,1000,0,document_id;source;page;section;section_id;page_char_start;page_char_end,none,intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3,Fixed windows provide a reproducible baseline; cuts may interrupt sentences.,7/15,12/15,1/5,2/5,219 chunks; real local 384D normalized embeddings; retrieval results in results/metrics.csv
+B,by_paragraph,1000,0,document_id;source;page;section;section_id;page_char_start;page_char_end,none,intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3,Paragraph and sentence boundaries may improve coherence at the same character cap.,8/15,11/15,3/5,3/5,229 chunks; real local 384D normalized embeddings; retrieval results in results/metrics.csv
+C,by_paragraph,1000,0,document_id;source;page;section;section_id;page_char_start;page_char_end,section from question only,intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3,Query-provided section filters may reduce out-of-scope hits; chunks and vectors stay identical to B.,8/15,12/15,3/5,3/5,229 chunks; real local 384D normalized embeddings; retrieval results in results/metrics.csv; reuses B document vectors

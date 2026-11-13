@@ -1,0 +1,55 @@
+{
+  "selection_rule": "First five physical pages per document, sorted; midpoint character. Chosen before retrieval scores.",
+  "anchors": [
+    {
+      "document_id": "gs_driving_review",
+      "page": 2,
+      "page_char_offset": 2004
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 3,
+      "page_char_offset": 1292
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 4,
+      "page_char_offset": 1296
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 5,
+      "page_char_offset": 2023
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 6,
+      "page_char_offset": 1442
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 2,
+      "page_char_offset": 2407
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 3,
+      "page_char_offset": 1857
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 4,
+      "page_char_offset": 1279
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 5,
+      "page_char_offset": 2056
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 6,
+      "page_char_offset": 1875
+    }
+  ]
+}

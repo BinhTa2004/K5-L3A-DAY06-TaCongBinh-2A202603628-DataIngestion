@@ -1,0 +1,16 @@
+[
+  {
+    "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+    "started_at": "2026-11-13T17:37:10.796339+07:00",
+    "selected_strategy": "C",
+    "holdout_status": "initial_holdout_on_fixed_configuration",
+    "selection_sha256": "25aa6c01f5420ae0f4858668a6ee056c2cbe018de52469f126cec17ae5dfcd52"
+  },
+  {
+    "fingerprint": "94fff7d9a901005835a531cc0db03dd5297c0007437afa7969c93fcdd84243ed",
+    "started_at": "2026-11-13T17:45:34.715309+07:00",
+    "selected_strategy": "C",
+    "holdout_status": "replay_of_fixed_configuration",
+    "selection_sha256": "25aa6c01f5420ae0f4858668a6ee056c2cbe018de52469f126cec17ae5dfcd52"
+  }
+]

@@ -1,0 +1,386 @@
+{
+  "status": "pass",
+  "page_records": 46,
+  "section_segments": 96,
+  "document_counts": {
+    "gs_driving_review": 25,
+    "gs_general_survey": 21
+  },
+  "empty_pages": [],
+  "failed_pages": [],
+  "duplicate_pages": [],
+  "all_page_text_matches_normalized_physical_pdf_pages": true,
+  "visual_sample_count": 8,
+  "visual_review_by": "Codex AI assistant; student sign-off has not been claimed",
+  "visual_audit": "results/text_audit.csv",
+  "pages": [
+    {
+      "document_id": "gs_driving_review",
+      "page": 2,
+      "char_count": 4009,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 3,
+      "char_count": 2584,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 4,
+      "char_count": 2592,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 5,
+      "char_count": 4046,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 6,
+      "char_count": 2884,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 7,
+      "char_count": 3350,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 8,
+      "char_count": 3172,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 9,
+      "char_count": 3108,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 10,
+      "char_count": 3511,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 11,
+      "char_count": 3245,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 12,
+      "char_count": 3059,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 13,
+      "char_count": 1523,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 14,
+      "char_count": 2955,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 15,
+      "char_count": 2841,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 16,
+      "char_count": 3882,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 17,
+      "char_count": 3397,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 18,
+      "char_count": 1848,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 19,
+      "char_count": 4158,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 20,
+      "char_count": 3742,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 21,
+      "char_count": 3600,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 22,
+      "char_count": 2195,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 23,
+      "char_count": 2961,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 24,
+      "char_count": 3669,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 25,
+      "char_count": 2863,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_driving_review",
+      "page": 26,
+      "char_count": 3557,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 2,
+      "char_count": 4814,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 3,
+      "char_count": 3714,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 4,
+      "char_count": 2559,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 5,
+      "char_count": 4112,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 6,
+      "char_count": 3751,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 7,
+      "char_count": 3838,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 8,
+      "char_count": 4271,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 9,
+      "char_count": 4459,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 10,
+      "char_count": 4209,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 11,
+      "char_count": 4212,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 12,
+      "char_count": 4215,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 13,
+      "char_count": 4344,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 14,
+      "char_count": 3691,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 15,
+      "char_count": 4454,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 16,
+      "char_count": 4529,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 17,
+      "char_count": 4325,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 18,
+      "char_count": 4531,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 19,
+      "char_count": 4302,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 20,
+      "char_count": 3811,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 21,
+      "char_count": 4140,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    },
+    {
+      "document_id": "gs_general_survey",
+      "page": 22,
+      "char_count": 4740,
+      "text_matches_pdf": true,
+      "extraction_status": "ok",
+      "section_spans_valid": true
+    }
+  ]
+}

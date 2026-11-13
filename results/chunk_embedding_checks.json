@@ -1,0 +1,72 @@
+{
+  "status": "pass",
+  "frozen_corpus_and_benchmark_unchanged": true,
+  "strategies": {
+    "A": {
+      "rows": 219,
+      "dimensions": 384,
+      "chunk_ids_align_with_vector_rows": true,
+      "array_hash_verified": true,
+      "finite_normalized_float32": true,
+      "coverage": {
+        "pages_checked": 46,
+        "source_characters": 165772,
+        "missing_characters": 0,
+        "missing_non_whitespace_characters": 0,
+        "empty_chunks": 0,
+        "duplicate_chunk_ids": 0,
+        "cross_section_chunks": 0
+      },
+      "reused_from": null
+    },
+    "B": {
+      "rows": 229,
+      "dimensions": 384,
+      "chunk_ids_align_with_vector_rows": true,
+      "array_hash_verified": true,
+      "finite_normalized_float32": true,
+      "coverage": {
+        "pages_checked": 46,
+        "source_characters": 165772,
+        "missing_characters": 0,
+        "missing_non_whitespace_characters": 0,
+        "empty_chunks": 0,
+        "duplicate_chunk_ids": 0,
+        "cross_section_chunks": 0
+      },
+      "reused_from": null
+    },
+    "C": {
+      "rows": 229,
+      "dimensions": 384,
+      "chunk_ids_align_with_vector_rows": true,
+      "array_hash_verified": true,
+      "finite_normalized_float32": true,
+      "coverage": {
+        "pages_checked": 46,
+        "source_characters": 165772,
+        "missing_characters": 0,
+        "missing_non_whitespace_characters": 0,
+        "empty_chunks": 0,
+        "duplicate_chunk_ids": 0,
+        "cross_section_chunks": 0
+      },
+      "reused_from": "B"
+    }
+  },
+  "queries": {
+    "rows": 20,
+    "dimensions": 384,
+    "ids_and_split_order_verified": true,
+    "finite_normalized_float32": true
+  },
+  "same_model_for_all_strategies": true,
+  "B_C_document_vectors_shared": true,
+  "no_input_truncated": true,
+  "retrieval_metrics_not_fabricated": true,
+  "paid_api_cost_usd": 0,
+  "unit_and_real_model_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "observed_tests_passed": 14
+  }
+}

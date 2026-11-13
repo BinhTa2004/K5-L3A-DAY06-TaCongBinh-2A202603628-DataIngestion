@@ -1,0 +1,506 @@
+﻿strategy,question_id,question,expected_answer,top3_chunk_ids,top3_text,score_0_1_2,reason,reviewer
+A,test01,"Để mở rộng 3D GS sang cảnh động, vì sao cần mô hình hóa thêm chiều thời gian?",Để biểu diễn sự thay đổi của cảnh hoặc vật thể theo thời gian và nắm bắt động lực chuyển động.,gs_general_survey:p12:fixed_size:a5cdf35815a901351e5071f0 | gs_driving_review:p12:fixed_size:c23ba6943b76e2fe2d15eafd | gs_general_survey:p2:fixed_size:3d9a03dac7b9bae0a24c579b,"without additional computational costs. iii) Style Transfer.
+Saroha et al. [218] proposed GS in style, an advanced approach for real-time neural scene stylization. To maintain a
+cohesive stylized appearance across multiple views without compromising on rendering speed, they used pre-trained
+3D Gaussians coupled with a multi-resolution hash grid and a small MLP to produce stylized views. In a nutshell,
+incorporating structured information can serve as a complementary part for adapting to tasks that are incompatible
+with the sparsity and disorder of 3D Gaussians.
+
+
+---
+
+H. Zhu et al.
+speed and quality, given that 3D GS can provide fast response and real-time performance
+while maintaining high visual quality (He et al. 2024).
+
+
+---
+
+hile
+simultaneously avoiding the computational overhead associated with NeRF based methods ( e.g., computationally
+expensive ray-marching, and unnecessary calculations in empty space).
+The introduction of 3D GS is not just a technical advancement; it represents a fundamental shift in how we approach
+scene representation and rendering in computer vision and graphics. By enabling real-time rendering capabilities
+without compromising on visual quality, 3D GS opens up a plethora of possibilities for applications ranging from virtual
+reality and augmented reality to real-time cinematic rendering and beyond [4, 103, 107, 192]. This technology holds
+the promise of not only enhancing existing applications but also enabling new ones that were previously unfeasible
+due to computational constraints. Furthermore, 3D GS’s explicit scene representation offers unprecedented flexibility
+to control the objects and scene dynamics, a crucial factor in complex scenarios involving intricate geometries and
+",0,"Top-3 nói về style transfer, chất lượng/tốc độ rendering và ứng dụng chung. Không có mệnh đề giải thích vì sao phải mô hình hóa thời gian để biểu diễn cảnh thay đổi; nhắc scene dynamics chung chưa đủ bằng chứng trả lời.",Trợ lý AI — đánh giá theo rubric
+A,test02,"Trong mục Vehicle navigation, GaussNav sử dụng ba giai đoạn chính nào?","Sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation.",gs_driving_review:p26:fixed_size:9a6e5fe9b3bbedcf691c48e6 | gs_driving_review:p25:fixed_size:736c3c7b67b29aec3b7ac210 | gs_driving_review:p26:fixed_size:109c4b656975a5282c49bfe2,"more detailed environment modeling and more accurate environment under -
+standing. However, BEV 2D maps are insufficient to characterize the complex textures and
+detailed features of a scene, and the Occupancy Network model places severe requirements
+on the arithmetic platform of the vehicle system. Thus, exploring an applicable, simple,
+and efficient algorithmic framework for target navigation is one of the common goals of
+researchers in automated navigation. The proposed framework enables the agent to not only
+memorize the geometry and semantic information of the scene, but also retain the textural
+features of objects. As shown in Fig. 12, Lei et al. ( 2024b) proposed GaussNav, a 3D GS-
+based instance image target navigation model. GaussNav transforms the original instance
+image target navigation task into a relatively easy-to-handle point target navigation task.
+GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation 
+
+---
+
+5.3 Vehicle navigation
+Navigation technology can provide the necessary location information and driving routes
+for vehicles, which are among the vital essential services to realize high-level autonomous
+driving. Based on the excellent performance demonstrated by 3D GS in scene reconstruc-
+tion of automatic driving, extending 3D GS to the research on automatic driving navigation
+Fig. 11 The overall pipeline of 4D Gaussian Splatting (Wu et al. 2023)
+
+1 3
+Page 25 of 33 30
+
+---
+
+ys a particular material-pointing method to incorporate the mechanical properties into
+the Gaussian body, eliminate the necessity of geometric embedding, and exhibits excellent
+physics simulation performance.
+In vehicle navigation, accurately obtaining the spatio-temporal alignment from multi -
+modal fusion data is one of the important research directions. Traditional methods require
+artificial markers and have poor generalization ability, so a reliable and trustworthy target-
+less calibration method is critical in vehicle calibration. Quentin et al. (2024) proposed a 3D
+GS-based calibration method, 3DGS-Calib, which has faster calibration speed and higher
+calibration accuracy than the existing implicit neural methods and can efficiently complete
+the in-vehicle multimodal spatio-temporal calibration task.
+Currently, the more mature visual navigation technology research focuses on map repre-
+sentation methods represented by Bird’s Eye View (BEV) and Occupancy Network, which
+can provide ",2,"Rank 1, gs_driving_review trang 26, đã nêu đủ sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation. Phần lợi ích sau danh sách bị cắt nhưng câu hỏi chỉ hỏi ba giai đoạn; có đủ bằng chứng và nguồn. Auto miss là do yêu cầu chứa toàn bộ quote dài hơn.",Trợ lý AI — đánh giá theo rubric
+A,test03,"Trong mục Simultaneous localization and mapping, SplaTAM đơn giản hóa màu và phân bố Gaussian như thế nào?",Chỉ dùng màu không phụ thuộc góc nhìn và làm phân bố Gaussian đẳng hướng (isotropic).,gs_driving_review:p20:fixed_size:94b8ec42bbca8327f3813808 | gs_general_survey:p19:fixed_size:d30a1de291f43fe371eab087 | gs_driving_review:p11:fixed_size:5ea4e3147f7ec9d1e7e8026e,"osed SplaTAM, which was a dense
+RGB-D SLAM solution based on 3D GS. SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic. Simultaneously, it uses microscopic rendering to directly compute the gradi-
+ents of Gaussian bodies and camera parameters. The final model achieves fast rendering at
+1 3
+30 Page 20 of 33
+
+---
+
+cent 3D Gaussians based localization algorithms have a clear advantage over
+existing NeRF based dense visual SLAM. For example, SplaTAM [110] achieves a trajectory error improvement of∼50%,
+decreasing it from 0.52cm to 0.36cm compared to the previous state-of-the-art (SOTA) [215]. We attribute this to the
+Manuscript submitted to ACM
+
+---
+
+ropic Splatting technique of 3D GS to ren-
+der the 3D Gaussian function considers the surface orientation and texture of the Gaussian
+body, so it can produce a more realistic effect in the rendering process. 3D GS uses sorting
+and α-blending to normalize the order of visibility of the Gaussian and track the required
+traversal of the sorted splats to significantly reduce the backpropagation time-consuming.
+Thus, it achieves real-time rendering in SOTA quality at high resolution. Above all, 3D GS
+successfully solves the trade-off between speed and quality of existing algorithms in the 3D
+reconstruction domain by tightly integrating three key modules. The 3D Gaussian represen-
+tation module provides a compact and continuous description of complex 3D shapes, the
+attribute optimization module ensures that the Gaussian function can accurately match the
+input data, and the real-time rendering module leverages the efficiency of GPU-accelerated
+algorithms to achieve high-quality rendering, fast",2,"Rank 1 trang 20 nói trực tiếp SplaTAM dùng view-independent colors và Gaussian isotropic, đủ cả hai yêu cầu. Hai kết quả ngoài mục được ghi thành lỗi filter riêng, không xóa giá trị bằng chứng đầy đủ của rank 1.",Trợ lý AI — đánh giá theo rubric
+A,test04,PhysGaussian gắn mô phỏng cơ học vào loại biểu diễn cảnh nào?,"Biểu diễn bằng các Gaussian 3D (Gaussian bodies), được dùng để gắn trạng thái cơ học với biểu diễn/rendering cảnh.",gs_driving_review:p18:fixed_size:da0d21fe120912d4a07ce70b | gs_general_survey:p15:fixed_size:fc7b7b7f5750c0e20fa0fee9 | gs_general_survey:p15:fixed_size:e704d9e29a82248c6d3bdac4,"H. Zhu et al.
+Gaussians as a monocular dynamic scene modeling pipeline model based on rasterization.
+By combining 3D GS, deformation field techniques, and an annealing smoothing train-
+ing mechanism, Deformable 3D Gaussians performs well on new view synthesis, temporal
+interpolation, and real-time rendering of the SOTA results on multiple datasets.
+
+
+---
+
+ and orientations to change. Yang et al. [292] designed a 4D Gaussian representation,
+where additional properties are used to represent 4D rotations and spherindrical harmonics, to approximate the
+spatial-temporal volume of scenes.
+While 3D GS advances dynamic scene reconstruction by modeling per-Gaussian deformations, its reliance on fine-
+grained primitives limits scalability and robustness. Current methods struggle to balance computational efficiency and
+precision: small-scale reconstructions unify dynamic and static elements but become intractable in large environments,
+often requiring manual priors to segment regions – a barrier in unstructured settings. Furthermore, the absence of
+object-level motion reasoning leads to artifacts and poor generalization over long sequences. Future work might
+prioritize object-centric frameworks that group Gaussians into persistent entities so as to model inherent motion
+disentanglement (dynamic vs. static).
+
+
+---
+
+A Survey on 3D Gaussian Splatting 15
+Sec. 4.5 and Sec. 4.6. The first category utilizes additional fields like spatial MLPs or grids to model deformation
+(Sec. 4.6). For example, Yang et al. [291] first proposed deformable 3D Gaussians tailored for dynamic scenes. These 3D
+Gaussians are learned in a canonical space and can be used to model spatial-temporal deformation with an implicit
+deformation field (implemented as an MLP). GaGS [161] devised the voxelization of a set of Gaussian distributions,
+followed by the use of sparse convolutions to extract geometry-aware features, which are then utilized for deformation
+learning. On the other hand, the second category is based on the idea that scene changes can be encoded into the
+3D Gaussian representation with a specially designed rendering process (Sec. 4.5). For instance, Luiten et al. [162]
+introduced dynamic 3D Gaussians to model dynamic scenes by keeping the properties of 3D Gaussians unchanged over
+time while allowing their positions",0,"Các đoạn đề cập Deformable 3D Gaussians và biểu diễn cảnh động, không nêu PhysGaussian hay liên hệ mô phỏng cơ học với Gaussian. Không suy đáp án cho một phương pháp cụ thể chỉ từ từ khóa Gaussian chung.",Trợ lý AI — đánh giá theo rubric
+A,test05,Benchmark tái dựng cảnh phẫu thuật sử dụng ba chỉ số chất lượng hình ảnh nào?,"PSNR, SSIM và LPIPS.",gs_driving_review:p5:fixed_size:e535ce6865762136eb8d16af | gs_general_survey:p21:fixed_size:f13f0400d894dc45e5c46668 | gs_general_survey:p20:fixed_size:9fc67d3d2fea4d11365359b8,"Scene reconstruction techniques for autonomous driving: a review of 3D…
+al. 2015), and Bundle Fusion (Dai et al. 2017). Binocular cameras simulate the human visual
+system by generating a parallax in the design of the camera mounting position, then obtain-
+ing the depth information of objects. The main idea behind BSV is to calibrate the internal
+and external parameters of the camera, and subsequently match the features under Euclid -
+ean geometry based on the idea of antipodal geometry. Then, BSV uses the principle of tri-
+angulation to obtain the depth information and realize the three-dimensional reconstruction.
+The traditional feature extraction algorithms are HOG (Shirpour et al. 2023), SIFT (Somaya
+et al. 2018), ORB (Song et al. 2018), and LBP (Wang et al. 2022). With the explosion of
+the extended-depth CNN model AlexNet (Nebauer 1998) in 2012, deep learning methods
+have been making significant breakthroughs in 3D reconstruction and attracting the atten-
+tion of researchers worldw
+
+---
+
+6.5 Performance Benchmarking: Surgical Scenes
+3D reconstruction from endoscopic video is critical to robotic-assisted minimally invasive surgery.
+• Dataset: EndoNeRF [257] dataset presents a specialized collection of stereo camera captures, comprising two samples
+of in-vivo prostatectomy. It is tailored to represent real-world surgical complexities, including challenging scenes with
+tool occlusion and pronounced non-rigid deformation. The same testing views as in [307] are used.
+• Benchmarking Algorithms: For performance comparison, we involve three works which reconstruct dynamic 3D
+endoscopic scenes with GS [90, 157, 324], as well as three NeRF-based surgical reconstruction approaches [257, 307].
+• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.
+• Result: Table S8 shows that introducing the explicit representation of 3D Gaussians leads to several significant
+improvements. For instance, EndoGaussian [157] outperforms a strong baseline, EndoSurf [307], 
+
+---
+
+6.3 Performance Benchmarking: Dynamic Scenes
+This section focuses on evaluating the rendering quality in dynamic scenes.
+• Dataset: D-NeRF [199] dataset includes videos with 50 to 200 frames each, captured from unique viewpoints. It
+features synthetic, animated objects in complex scenes, with non-Lambertian materials. The dataset provides 50 to 200
+training images and 20 test images per scene. The testing views are the same as the original paper [199].
+• Benchmarking Algorithms: For performance comparison, we involve five recent papers that model dynamic scenes
+with 3D GS [161, 263, 291, 292, 300], as well as six NeRF based approaches [72, 199, 250].
+• Evaluation Metric: The same metrics as in Sec. 6.2, i.e., PSNR, SSIM [259], and LPIPS [317], are used for evaluation.
+• Result: From Table S6 we can observe that 3D GS based methods outperform existing SOTAs by a clear margin. The
+static version of 3D GS [111] fails to reconstruct dynamic scenes, resulting in a sharp drop in performance.",2,"Rank 2, gs_general_survey trang 21, có heading Surgical Scenes và câu Evaluation Metric nêu PSNR, SSIM, LPIPS. Đủ đáp án và ngữ cảnh phẫu thuật dù rank 1 lệch chủ đề.",Trợ lý AI — đánh giá theo rubric
+B,test01,"Để mở rộng 3D GS sang cảnh động, vì sao cần mô hình hóa thêm chiều thời gian?",Để biểu diễn sự thay đổi của cảnh hoặc vật thể theo thời gian và nắm bắt động lực chuyển động.,gs_general_survey:p12:by_paragraph:e926e9ed941d3d466bdf61d5 | gs_driving_review:p12:by_paragraph:0942917d26b4e5f11cd91007 | gs_general_survey:p2:by_paragraph:fe858319bddbc870ff310875,"The proposed method also incorporated an annealing smoothing
+training mechanism to enhance temporal smoothness without additional computational costs. iii) Style Transfer.
+Saroha et al. [218] proposed GS in style, an advanced approach for real-time neural scene stylization. To maintain a
+cohesive stylized appearance across multiple views without compromising on rendering speed, they used pre-trained
+3D Gaussians coupled with a multi-resolution hash grid and a small MLP to produce stylized views. In a nutshell,
+incorporating structured information can serve as a complementary part for adapting to tasks that are incompatible
+with the sparsity and disorder of 3D Gaussians.
+
+
+---
+
+H. Zhu et al.
+speed and quality, given that 3D GS can provide fast response and real-time performance
+while maintaining high visual quality (He et al. 2024).
+
+
+---
+
+By representing scenes with learnable 3D Gaussians, it preserves the
+strong fitting capability of continuous volumetric radiance fields, essential for high-quality image synthesis, while
+simultaneously avoiding the computational overhead associated with NeRF based methods ( e.g., computationally
+expensive ray-marching, and unnecessary calculations in empty space).
+The introduction of 3D GS is not just a technical advancement; it represents a fundamental shift in how we approach
+scene representation and rendering in computer vision and graphics. By enabling real-time rendering capabilities
+without compromising on visual quality, 3D GS opens up a plethora of possibilities for applications ranging from virtual
+reality and augmented reality to real-time cinematic rendering and beyond [4, 103, 107, 192]. This technology holds
+the promise of not only enhancing existing applications but also enabling new ones that were previously unfeasible
+due to computational constraints. ",1,"Rank 1 trang 12 nhắc annealing smoothing để tăng temporal smoothness, là bằng chứng liên quan một phần đến thời gian. Top-3 không giải thích trực tiếp việc biểu diễn cảnh/vật thể thay đổi theo thời gian, nên chưa đủ trả lời đầy đủ.",Trợ lý AI — đánh giá theo rubric
+B,test02,"Trong mục Vehicle navigation, GaussNav sử dụng ba giai đoạn chính nào?","Sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation.",gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331 | gs_driving_review:p26:by_paragraph:1509b0734c62e342eae3adfb | gs_driving_review:p25:by_paragraph:1e6449bbf119097fa8ed0da3,"GaussNav transforms the original instance
+image target navigation task into a relatively easy-to-handle point target navigation task.
+GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation to efficiently localize the target object and signifi-
+cantly improve the performance.
+
+
+---
+
+Currently, the more mature visual navigation technology research focuses on map repre-
+sentation methods represented by Bird’s Eye View (BEV) and Occupancy Network, which
+can provide more detailed environment modeling and more accurate environment under -
+standing. However, BEV 2D maps are insufficient to characterize the complex textures and
+detailed features of a scene, and the Occupancy Network model places severe requirements
+on the arithmetic platform of the vehicle system. Thus, exploring an applicable, simple,
+and efficient algorithmic framework for target navigation is one of the common goals of
+researchers in automated navigation. The proposed framework enables the agent to not only
+memorize the geometry and semantic information of the scene, but also retain the textural
+features of objects. As shown in Fig. 12, Lei et al. ( 2024b) proposed GaussNav, a 3D GS-
+based instance image target navigation model. 
+
+---
+
+5.3 Vehicle navigation
+Navigation technology can provide the necessary location information and driving routes
+for vehicles, which are among the vital essential services to realize high-level autonomous
+driving. Based on the excellent performance demonstrated by 3D GS in scene reconstruc-
+tion of automatic driving, extending 3D GS to the research on automatic driving navigation
+Fig. 11 The overall pipeline of 4D Gaussian Splatting (Wu et al. 2023)
+
+1 3
+Page 25 of 33 30",2,"Rank 1 trang 26 giữ nguyên câu liệt kê đủ ba giai đoạn GaussNav cùng ngữ cảnh điều hướng; nguồn và trang rõ. Các đoạn còn lại bổ sung bối cảnh, không cần để hoàn thành đáp án.",Trợ lý AI — đánh giá theo rubric
+B,test03,"Trong mục Simultaneous localization and mapping, SplaTAM đơn giản hóa màu và phân bố Gaussian như thế nào?",Chỉ dùng màu không phụ thuộc góc nhìn và làm phân bố Gaussian đẳng hướng (isotropic).,gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075 | gs_driving_review:p11:by_paragraph:14343bfe9de27a5bbc2fd991 | gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb,"However,
+regarding the overall framework operation efficiency and localization accuracy, GS-SLAM
+has not significantly improved. Keetha et al. (2023) proposed SplaTAM, which was a dense
+RGB-D SLAM solution based on 3D GS. SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic. Simultaneously, it uses microscopic rendering to directly compute the gradi-
+ents of Gaussian bodies and camera parameters. The final model achieves fast rendering at
+1 3
+30 Page 20 of 33
+
+---
+
+Then, each tile performs
+the local sorting of the Gaussian function, utilizes the parallel processing capability of the
+GPU to simultaneously perform reasonable global sorting of the data in multiple tiles, and
+optimizes the memory access pattern to reduce the use of memory bandwidth to improve
+the sorting efficiency. Meanwhile, the Anisotropic Splatting technique of 3D GS to ren-
+der the 3D Gaussian function considers the surface orientation and texture of the Gaussian
+body, so it can produce a more realistic effect in the rendering process. 3D GS uses sorting
+and α-blending to normalize the order of visibility of the Gaussian and track the required
+traversal of the sorted splats to significantly reduce the backpropagation time-consuming.
+Thus, it achieves real-time rendering in SOTA quality at high resolution. Above all, 3D GS
+successfully solves the trade-off between speed and quality of existing algorithms in the 3D
+reconstruction domain by tightly integrating three key modules. 
+
+---
+
+A Survey on 3D Gaussian Splatting 15
+Sec. 4.5 and Sec. 4.6. The first category utilizes additional fields like spatial MLPs or grids to model deformation
+(Sec. 4.6). For example, Yang et al. [291] first proposed deformable 3D Gaussians tailored for dynamic scenes. These 3D
+Gaussians are learned in a canonical space and can be used to model spatial-temporal deformation with an implicit
+deformation field (implemented as an MLP). GaGS [161] devised the voxelization of a set of Gaussian distributions,
+followed by the use of sparse convolutions to extract geometry-aware features, which are then utilized for deformation
+learning. On the other hand, the second category is based on the idea that scene changes can be encoded into the
+3D Gaussian representation with a specially designed rendering process (Sec. 4.5). ",2,"Rank 1 trang 20 xác định SplaTAM và nêu đủ màu view-independent, Gaussian isotropic. Top-3 có bằng chứng đầy đủ; hai chunk khác mục không thay thế việc chấm đúng metadata/filter riêng.",Trợ lý AI — đánh giá theo rubric
+B,test04,PhysGaussian gắn mô phỏng cơ học vào loại biểu diễn cảnh nào?,"Biểu diễn bằng các Gaussian 3D (Gaussian bodies), được dùng để gắn trạng thái cơ học với biểu diễn/rendering cảnh.",gs_driving_review:p18:by_paragraph:4fd929fec584f30a9149bfd6 | gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb | gs_driving_review:p21:by_paragraph:e017e155011f028e2a7366c3,"H. Zhu et al.
+Gaussians as a monocular dynamic scene modeling pipeline model based on rasterization.
+By combining 3D GS, deformation field techniques, and an annealing smoothing train-
+ing mechanism, Deformable 3D Gaussians performs well on new view synthesis, temporal
+interpolation, and real-time rendering of the SOTA results on multiple datasets.
+
+
+---
+
+A Survey on 3D Gaussian Splatting 15
+Sec. 4.5 and Sec. 4.6. The first category utilizes additional fields like spatial MLPs or grids to model deformation
+(Sec. 4.6). For example, Yang et al. [291] first proposed deformable 3D Gaussians tailored for dynamic scenes. These 3D
+Gaussians are learned in a canonical space and can be used to model spatial-temporal deformation with an implicit
+deformation field (implemented as an MLP). GaGS [161] devised the voxelization of a set of Gaussian distributions,
+followed by the use of sparse convolutions to extract geometry-aware features, which are then utilized for deformation
+learning. On the other hand, the second category is based on the idea that scene changes can be encoded into the
+3D Gaussian representation with a specially designed rendering process (Sec. 4.5). 
+
+---
+
+The model combines a temporal smoothing mech-
+anism and a location-aware adaptive control strategy to enable dynamic large-scale urban
+scene reconstruction without relying on manually labeled object bounding boxes or expen-
+sive optical flow estimation. Zhou et al. (2023) proposed DrivingGaussian, the first compos-
+ite 3D GS-based representation and modeling framework for large-scale dynamic driving
+scenes. DrivingGaussian divides the modeling process of a dynamic driving scene into two
+parts: the incremental static 3D Gaussian module and the composite dynamic Gaussian map
+module. The complex driving scene is hierarchically modeled based on the input multi-
+source heterogeneous data order to form a high-efficiency and high-quality framework for
+the 3D reconstruction and simulation of dynamic surround-view driving scenes. Yan et al.
+",0,"Top-3 thuộc Deformable 3D Gaussians, dynamic scene reconstruction và DrivingGaussian/PVG; không có bằng chứng về PhysGaussian hay cách mô phỏng cơ học của nó.",Trợ lý AI — đánh giá theo rubric
+B,test05,Benchmark tái dựng cảnh phẫu thuật sử dụng ba chỉ số chất lượng hình ảnh nào?,"PSNR, SSIM và LPIPS.",gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386 | gs_driving_review:p5:by_paragraph:f95dc903441b9b3bf718c288 | gs_general_survey:p20:by_paragraph:d2a956cd1e7719a397496f43,"6.5 Performance Benchmarking: Surgical Scenes
+3D reconstruction from endoscopic video is critical to robotic-assisted minimally invasive surgery.
+• Dataset: EndoNeRF [257] dataset presents a specialized collection of stereo camera captures, comprising two samples
+of in-vivo prostatectomy. It is tailored to represent real-world surgical complexities, including challenging scenes with
+tool occlusion and pronounced non-rigid deformation. The same testing views as in [307] are used.
+• Benchmarking Algorithms: For performance comparison, we involve three works which reconstruct dynamic 3D
+endoscopic scenes with GS [90, 157, 324], as well as three NeRF-based surgical reconstruction approaches [257, 307].
+• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.
+• Result: Table S8 shows that introducing the explicit representation of 3D Gaussians leads to several significant
+improvements. 
+
+---
+
+Scene reconstruction techniques for autonomous driving: a review of 3D…
+al. 2015), and Bundle Fusion (Dai et al. 2017). Binocular cameras simulate the human visual
+system by generating a parallax in the design of the camera mounting position, then obtain-
+ing the depth information of objects. The main idea behind BSV is to calibrate the internal
+and external parameters of the camera, and subsequently match the features under Euclid -
+ean geometry based on the idea of antipodal geometry. Then, BSV uses the principle of tri-
+angulation to obtain the depth information and realize the three-dimensional reconstruction.
+The traditional feature extraction algorithms are HOG (Shirpour et al. 2023), SIFT (Somaya
+et al. 2018), ORB (Song et al. 2018), and LBP (Wang et al. 2022). 
+
+---
+
+6.3 Performance Benchmarking: Dynamic Scenes
+This section focuses on evaluating the rendering quality in dynamic scenes.
+• Dataset: D-NeRF [199] dataset includes videos with 50 to 200 frames each, captured from unique viewpoints. It
+features synthetic, animated objects in complex scenes, with non-Lambertian materials. The dataset provides 50 to 200
+training images and 20 test images per scene. The testing views are the same as the original paper [199].
+• Benchmarking Algorithms: For performance comparison, we involve five recent papers that model dynamic scenes
+with 3D GS [161, 263, 291, 292, 300], as well as six NeRF based approaches [72, 199, 250].
+• Evaluation Metric: The same metrics as in Sec. 6.2, i.e., PSNR, SSIM [259], and LPIPS [317], are used for evaluation.
+• Result: From Table S6 we can observe that 3D GS based methods outperform existing SOTAs by a clear margin. ",2,"Rank 1 trang 21 giữ heading Performance Benchmarking: Surgical Scenes và danh sách PSNR, SSIM, LPIPS. Đủ nội dung trả lời và truy nguồn, không cần suy từ benchmark cảnh động.",Trợ lý AI — đánh giá theo rubric
+C,test01,"Để mở rộng 3D GS sang cảnh động, vì sao cần mô hình hóa thêm chiều thời gian?",Để biểu diễn sự thay đổi của cảnh hoặc vật thể theo thời gian và nắm bắt động lực chuyển động.,gs_general_survey:p12:by_paragraph:e926e9ed941d3d466bdf61d5 | gs_driving_review:p12:by_paragraph:0942917d26b4e5f11cd91007 | gs_general_survey:p2:by_paragraph:fe858319bddbc870ff310875,"The proposed method also incorporated an annealing smoothing
+training mechanism to enhance temporal smoothness without additional computational costs. iii) Style Transfer.
+Saroha et al. [218] proposed GS in style, an advanced approach for real-time neural scene stylization. To maintain a
+cohesive stylized appearance across multiple views without compromising on rendering speed, they used pre-trained
+3D Gaussians coupled with a multi-resolution hash grid and a small MLP to produce stylized views. In a nutshell,
+incorporating structured information can serve as a complementary part for adapting to tasks that are incompatible
+with the sparsity and disorder of 3D Gaussians.
+
+
+---
+
+H. Zhu et al.
+speed and quality, given that 3D GS can provide fast response and real-time performance
+while maintaining high visual quality (He et al. 2024).
+
+
+---
+
+By representing scenes with learnable 3D Gaussians, it preserves the
+strong fitting capability of continuous volumetric radiance fields, essential for high-quality image synthesis, while
+simultaneously avoiding the computational overhead associated with NeRF based methods ( e.g., computationally
+expensive ray-marching, and unnecessary calculations in empty space).
+The introduction of 3D GS is not just a technical advancement; it represents a fundamental shift in how we approach
+scene representation and rendering in computer vision and graphics. By enabling real-time rendering capabilities
+without compromising on visual quality, 3D GS opens up a plethora of possibilities for applications ranging from virtual
+reality and augmented reality to real-time cinematic rendering and beyond [4, 103, 107, 192]. This technology holds
+the promise of not only enhancing existing applications but also enabling new ones that were previously unfeasible
+due to computational constraints. ",1,Câu không có filter nên top-3 giống B. Chỉ đoạn temporal smoothness liên quan một phần; thiếu giải thích trực tiếp vì sao phải mô hình hóa thời gian cho cảnh thay đổi.,Trợ lý AI — đánh giá theo rubric
+C,test02,"Trong mục Vehicle navigation, GaussNav sử dụng ba giai đoạn chính nào?","Sub-Gaussian segmentation, semantic Gaussian construction và Gaussian navigation.",gs_driving_review:p26:by_paragraph:ad1a6a0f5b07d72bcdeeb331 | gs_driving_review:p26:by_paragraph:1509b0734c62e342eae3adfb | gs_driving_review:p25:by_paragraph:1e6449bbf119097fa8ed0da3,"GaussNav transforms the original instance
+image target navigation task into a relatively easy-to-handle point target navigation task.
+GaussNav uses the three main phases of sub-Gaussian segmentation, semantic Gaussian
+construction, and Gaussian navigation to efficiently localize the target object and signifi-
+cantly improve the performance.
+
+
+---
+
+Currently, the more mature visual navigation technology research focuses on map repre-
+sentation methods represented by Bird’s Eye View (BEV) and Occupancy Network, which
+can provide more detailed environment modeling and more accurate environment under -
+standing. However, BEV 2D maps are insufficient to characterize the complex textures and
+detailed features of a scene, and the Occupancy Network model places severe requirements
+on the arithmetic platform of the vehicle system. Thus, exploring an applicable, simple,
+and efficient algorithmic framework for target navigation is one of the common goals of
+researchers in automated navigation. The proposed framework enables the agent to not only
+memorize the geometry and semantic information of the scene, but also retain the textural
+features of objects. As shown in Fig. 12, Lei et al. ( 2024b) proposed GaussNav, a 3D GS-
+based instance image target navigation model. 
+
+---
+
+5.3 Vehicle navigation
+Navigation technology can provide the necessary location information and driving routes
+for vehicles, which are among the vital essential services to realize high-level autonomous
+driving. Based on the excellent performance demonstrated by 3D GS in scene reconstruc-
+tion of automatic driving, extending 3D GS to the research on automatic driving navigation
+Fig. 11 The overall pipeline of 4D Gaussian Splatting (Wu et al. 2023)
+
+1 3
+Page 25 of 33 30",2,Rank 1 trang 26 nêu đủ ba giai đoạn GaussNav; toàn bộ top-3 đúng mục Vehicle navigation đã yêu cầu. Bằng chứng và truy nguồn đầy đủ.,Trợ lý AI — đánh giá theo rubric
+C,test03,"Trong mục Simultaneous localization and mapping, SplaTAM đơn giản hóa màu và phân bố Gaussian như thế nào?",Chỉ dùng màu không phụ thuộc góc nhìn và làm phân bố Gaussian đẳng hướng (isotropic).,gs_driving_review:p20:by_paragraph:d401c48859580336b14d6075 | gs_driving_review:p21:by_paragraph:2aee391c87ae58b5d405feba | gs_driving_review:p21:by_paragraph:510217515644f19258346018,"However,
+regarding the overall framework operation efficiency and localization accuracy, GS-SLAM
+has not significantly improved. Keetha et al. (2023) proposed SplaTAM, which was a dense
+RGB-D SLAM solution based on 3D GS. SplaTAM streamlines the architecture of the
+underlying 3D GS using only view-independent colors and making the Gaussian distribu-
+tion isotropic. Simultaneously, it uses microscopic rendering to directly compute the gradi-
+ents of Gaussian bodies and camera parameters. The final model achieves fast rendering at
+1 3
+30 Page 20 of 33
+
+---
+
+(2024) proposed that the Street Gaussians model also adopted a layered modeling approach,
+but they used a 4D ball-harmonic model in the dynamic foreground modeling to improve the
+lack of accuracy of the original 3D GS in simulating moving vehicles. The model generates
+Table 3 Rendering effectiveness of different SLAM methods on the Replica (Straub et al. 2019) dataset
+(Chen and Wang 2024; Wu et al. 2024a)
+Method
+type
+Model Norm
+PSNR↑ SSIM↑ LPIPS↓
+Neural
+network
+model
+NICE-SLAM (Zhu et al. 2022) 24.42 0.81 0.23
+Vox-Fusion (Yang et al. 2022) 24.41 0.80 0.24
+Co-SLAM (Wang et al. 2023) 30.24 0.94 0.25
+3D GS
+model
+GS-SLAM (Mueller et al. 2023; Yan et al. 2023) 31.56 0.97 0.094
+SplaTAM (Keetha et al. 2023; Yang et al. 2023c) 34.11 0.97 0.10
+Gaussian Splatting SLAM (Hidenobu et al. 2023; Suhail
+et al. 2022)
+37.50 0.96 0.07
+Gaussian-SLAM (Chen et al. 2024b; Yan et al. 2023) 38.90 0.99 0.07
+1 3
+Page 21 of 33 30
+
+---
+
+Scene reconstruction techniques for autonomous driving: a review of 3D…
+high accuracy. Hidenobu et al. (2023) proposed the first monocular SLAM model, Gaussian
+Splatting SLAM, entirely based on 3D GS, which was the first model to achieve real-time
+incremental 3D GS-based reconstruction at a speed of 3 FPS and uses Gaussians as the only
+3D representation. Similarly, other works such as Gaussian-SLAM (Vladimir et al. 2023),
+Photo-SLAM (Huang et al. 2023), and NEDS-SLAM (Ji et al. 2024) have advanced the
+development of 3D GS-based SLAM. Table 3 shows the rendering results of some SLAM
+models on the Replica dataset. The 3D GS-based model significantly improves all indices
+compared to the implicit neural network model.
+Some researchers used multi-source heterogeneous data structures to compensate for
+the lack of visual information and achieved good results on the broader application level
+of autonomous driving. Hong et al. ",2,Rank 1 trang 20 nêu đủ hai đơn giản hóa của SplaTAM; filter giữ cả ba kết quả trong mục Simultaneous localization and mapping. Các bảng/kết quả khác không cần dùng để suy hai thuộc tính này.,Trợ lý AI — đánh giá theo rubric
+C,test04,PhysGaussian gắn mô phỏng cơ học vào loại biểu diễn cảnh nào?,"Biểu diễn bằng các Gaussian 3D (Gaussian bodies), được dùng để gắn trạng thái cơ học với biểu diễn/rendering cảnh.",gs_driving_review:p18:by_paragraph:4fd929fec584f30a9149bfd6 | gs_general_survey:p15:by_paragraph:66da37a89d55b3bb951f1acb | gs_driving_review:p21:by_paragraph:e017e155011f028e2a7366c3,"H. Zhu et al.
+Gaussians as a monocular dynamic scene modeling pipeline model based on rasterization.
+By combining 3D GS, deformation field techniques, and an annealing smoothing train-
+ing mechanism, Deformable 3D Gaussians performs well on new view synthesis, temporal
+interpolation, and real-time rendering of the SOTA results on multiple datasets.
+
+
+---
+
+A Survey on 3D Gaussian Splatting 15
+Sec. 4.5 and Sec. 4.6. The first category utilizes additional fields like spatial MLPs or grids to model deformation
+(Sec. 4.6). For example, Yang et al. [291] first proposed deformable 3D Gaussians tailored for dynamic scenes. These 3D
+Gaussians are learned in a canonical space and can be used to model spatial-temporal deformation with an implicit
+deformation field (implemented as an MLP). GaGS [161] devised the voxelization of a set of Gaussian distributions,
+followed by the use of sparse convolutions to extract geometry-aware features, which are then utilized for deformation
+learning. On the other hand, the second category is based on the idea that scene changes can be encoded into the
+3D Gaussian representation with a specially designed rendering process (Sec. 4.5). 
+
+---
+
+The model combines a temporal smoothing mech-
+anism and a location-aware adaptive control strategy to enable dynamic large-scale urban
+scene reconstruction without relying on manually labeled object bounding boxes or expen-
+sive optical flow estimation. Zhou et al. (2023) proposed DrivingGaussian, the first compos-
+ite 3D GS-based representation and modeling framework for large-scale dynamic driving
+scenes. DrivingGaussian divides the modeling process of a dynamic driving scene into two
+parts: the incremental static 3D Gaussian module and the composite dynamic Gaussian map
+module. The complex driving scene is hierarchically modeled based on the input multi-
+source heterogeneous data order to form a high-efficiency and high-quality framework for
+the 3D reconstruction and simulation of dynamic surround-view driving scenes. Yan et al.
+",0,Không có filter và top-3 giống B; các phương pháp Deformable/DrivingGaussian không cung cấp bằng chứng về phương pháp PhysGaussian được hỏi.,Trợ lý AI — đánh giá theo rubric
+C,test05,Benchmark tái dựng cảnh phẫu thuật sử dụng ba chỉ số chất lượng hình ảnh nào?,"PSNR, SSIM và LPIPS.",gs_general_survey:p21:by_paragraph:ad87fbe9b67a22c7518f9386 | gs_driving_review:p5:by_paragraph:f95dc903441b9b3bf718c288 | gs_general_survey:p20:by_paragraph:d2a956cd1e7719a397496f43,"6.5 Performance Benchmarking: Surgical Scenes
+3D reconstruction from endoscopic video is critical to robotic-assisted minimally invasive surgery.
+• Dataset: EndoNeRF [257] dataset presents a specialized collection of stereo camera captures, comprising two samples
+of in-vivo prostatectomy. It is tailored to represent real-world surgical complexities, including challenging scenes with
+tool occlusion and pronounced non-rigid deformation. The same testing views as in [307] are used.
+• Benchmarking Algorithms: For performance comparison, we involve three works which reconstruct dynamic 3D
+endoscopic scenes with GS [90, 157, 324], as well as three NeRF-based surgical reconstruction approaches [257, 307].
+• Evaluation Metric: PSNR, SSIM [259], and LPIPS [317] are adopted for evaluation.
+• Result: Table S8 shows that introducing the explicit representation of 3D Gaussians leads to several significant
+improvements. 
+
+---
+
+Scene reconstruction techniques for autonomous driving: a review of 3D…
+al. 2015), and Bundle Fusion (Dai et al. 2017). Binocular cameras simulate the human visual
+system by generating a parallax in the design of the camera mounting position, then obtain-
+ing the depth information of objects. The main idea behind BSV is to calibrate the internal
+and external parameters of the camera, and subsequently match the features under Euclid -
+ean geometry based on the idea of antipodal geometry. Then, BSV uses the principle of tri-
+angulation to obtain the depth information and realize the three-dimensional reconstruction.
+The traditional feature extraction algorithms are HOG (Shirpour et al. 2023), SIFT (Somaya
+et al. 2018), ORB (Song et al. 2018), and LBP (Wang et al. 2022). 
+
+---
+
+6.3 Performance Benchmarking: Dynamic Scenes
+This section focuses on evaluating the rendering quality in dynamic scenes.
+• Dataset: D-NeRF [199] dataset includes videos with 50 to 200 frames each, captured from unique viewpoints. It
+features synthetic, animated objects in complex scenes, with non-Lambertian materials. The dataset provides 50 to 200
+training images and 20 test images per scene. The testing views are the same as the original paper [199].
+• Benchmarking Algorithms: For performance comparison, we involve five recent papers that model dynamic scenes
+with 3D GS [161, 263, 291, 292, 300], as well as six NeRF based approaches [72, 199, 250].
+• Evaluation Metric: The same metrics as in Sec. 6.2, i.e., PSNR, SSIM [259], and LPIPS [317], are used for evaluation.
+• Result: From Table S6 we can observe that 3D GS based methods outperform existing SOTAs by a clear margin. ",2,"Câu không có filter nên top-3 giống B. Rank 1 có đúng ngữ cảnh Surgical Scenes và cả ba metric PSNR, SSIM, LPIPS; đủ để trả lời và truy nguồn.",Trợ lý AI — đánh giá theo rubric

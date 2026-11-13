@@ -1,0 +1,191 @@
+{
+  "status": "pass",
+  "questions": 20,
+  "split_counts": {
+    "dev": 15,
+    "test": 5
+  },
+  "filter_questions": 5,
+  "test_filter_questions": 2,
+  "questions_with_alternative_evidence": 5,
+  "verified_evidence_passages": 25,
+  "evidence_length_characters": {
+    "minimum": 82,
+    "maximum": 960
+  },
+  "semantic_reviewer": "Codex AI assistant; not a claim of student/human review",
+  "gold_pages_disjoint_between_splits": true,
+  "retrieval_executed_by_this_script": false,
+  "details": [
+    {
+      "id": "dev01",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 235,
+      "status": "pass"
+    },
+    {
+      "id": "dev02",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 129,
+      "status": "pass"
+    },
+    {
+      "id": "dev03",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 2,
+      "primary_quote_characters": 292,
+      "status": "pass"
+    },
+    {
+      "id": "dev04",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 2,
+      "primary_quote_characters": 242,
+      "status": "pass"
+    },
+    {
+      "id": "dev05",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 2,
+      "primary_quote_characters": 185,
+      "status": "pass"
+    },
+    {
+      "id": "dev06",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 131,
+      "status": "pass"
+    },
+    {
+      "id": "dev07",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 116,
+      "status": "pass"
+    },
+    {
+      "id": "dev08",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 180,
+      "status": "pass"
+    },
+    {
+      "id": "dev09",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 327,
+      "status": "pass"
+    },
+    {
+      "id": "dev10",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 385,
+      "status": "pass"
+    },
+    {
+      "id": "dev11",
+      "split": "dev",
+      "filter": {
+        "section": "Main modules"
+      },
+      "gold_count": 1,
+      "primary_quote_characters": 130,
+      "status": "pass"
+    },
+    {
+      "id": "dev12",
+      "split": "dev",
+      "filter": {
+        "section": "Memory-efficient 3D GS"
+      },
+      "gold_count": 1,
+      "primary_quote_characters": 960,
+      "status": "pass"
+    },
+    {
+      "id": "dev13",
+      "split": "dev",
+      "filter": {
+        "section": "3D GS for Sparse Input"
+      },
+      "gold_count": 1,
+      "primary_quote_characters": 388,
+      "status": "pass"
+    },
+    {
+      "id": "dev14",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 159,
+      "status": "pass"
+    },
+    {
+      "id": "dev15",
+      "split": "dev",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 147,
+      "status": "pass"
+    },
+    {
+      "id": "test01",
+      "split": "test",
+      "filter": {},
+      "gold_count": 2,
+      "primary_quote_characters": 147,
+      "status": "pass"
+    },
+    {
+      "id": "test02",
+      "split": "test",
+      "filter": {
+        "section": "Vehicle navigation"
+      },
+      "gold_count": 1,
+      "primary_quote_characters": 208,
+      "status": "pass"
+    },
+    {
+      "id": "test03",
+      "split": "test",
+      "filter": {
+        "section": "Simultaneous localization and mapping"
+      },
+      "gold_count": 1,
+      "primary_quote_characters": 145,
+      "status": "pass"
+    },
+    {
+      "id": "test04",
+      "split": "test",
+      "filter": {},
+      "gold_count": 2,
+      "primary_quote_characters": 192,
+      "status": "pass"
+    },
+    {
+      "id": "test05",
+      "split": "test",
+      "filter": {},
+      "gold_count": 1,
+      "primary_quote_characters": 82,
+      "status": "pass"
+    }
+  ]
+}

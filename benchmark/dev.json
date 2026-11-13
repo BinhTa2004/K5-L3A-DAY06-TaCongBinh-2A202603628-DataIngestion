@@ -1,0 +1,407 @@
+[
+  {
+    "id": "dev01",
+    "split": "dev",
+    "question": "Vì sao các kỹ thuật tái dựng chủ động gặp khó khăn khi áp dụng cho cảnh ngoài trời?",
+    "expected_answer": "Chi phí thiết bị cao, tốc độ phát hiện chậm và khả năng khái quát của thuật toán kém.",
+    "topic": "active_reconstruction_limits",
+    "filter": {},
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 2,
+    "evidence_quote": "Among the 3D scene reconstruction methods, active reconstruction techniques perform\npoorly the application of outdoor scenes due to their high equipment cost, slow detection\nspeed, and poor algorithm generalization (Zhou et al. 2024a).",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 2,
+        "evidence_quote": "Among the 3D scene reconstruction methods, active reconstruction techniques perform\npoorly the application of outdoor scenes due to their high equipment cost, slow detection\nspeed, and poor algorithm generalization (Zhou et al. 2024a).",
+        "evidence_start": 29,
+        "evidence_end": 264,
+        "section": "Introduction"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev02",
+    "split": "dev",
+    "question": "Trong binocular stereo vision (BSV), nguyên lý nào được dùng để suy ra độ sâu và tái dựng 3D?",
+    "expected_answer": "Nguyên lý tam giác đạc (triangulation).",
+    "topic": "stereo_depth",
+    "filter": {},
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 5,
+    "evidence_quote": "Then, BSV uses the principle of tri-\nangulation to obtain the depth information and realize the three-dimensional reconstruction.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 5,
+        "evidence_quote": "Then, BSV uses the principle of tri-\nangulation to obtain the depth information and realize the three-dimensional reconstruction.",
+        "evidence_start": 492,
+        "evidence_end": 621,
+        "section": "3D Scene reconstruction methods"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev03",
+    "split": "dev",
+    "question": "Hạn chế về tài nguyên và thời gian nào của NeRF gây khó khăn cho các ứng dụng cần phản hồi nhanh?",
+    "expected_answer": "NeRF tốn tài nguyên tính toán khi huấn luyện và rendering, với thời gian huấn luyện/rendering lớn hoặc rendering chậm.",
+    "topic": "nerf_compute_limits",
+    "filter": {},
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 2,
+    "evidence_quote": "Nonetheless, NeRF models require a large amount of com-\nputational resources during training and have a slow rendering speed, which makes them\ndifficult to integrate into in-vehicle systems to fulfill the real-time reliability requirements\nof high-level autonomous driving (Zhu et al. 2023a).",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 2,
+        "evidence_quote": "Nonetheless, NeRF models require a large amount of com-\nputational resources during training and have a slow rendering speed, which makes them\ndifficult to integrate into in-vehicle systems to fulfill the real-time reliability requirements\nof high-level autonomous driving (Zhu et al. 2023a).",
+        "evidence_start": 1683,
+        "evidence_end": 1975,
+        "section": "Introduction"
+      },
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 2,
+        "evidence_quote": "i) Computational Intensity. NeRF based methods are computationally\nintensive [64, 181], often requiring substantial training times and resources for rendering, especially for high-resolution\noutputs.",
+        "evidence_start": 421,
+        "evidence_end": 620,
+        "section": "INTRODUCTION"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev04",
+    "split": "dev",
+    "question": "Đám mây điểm thưa dùng để khởi tạo các Gaussian trong 3D GS có thể được tạo bởi kỹ thuật nào?",
+    "expected_answer": "Structure from Motion (SfM).",
+    "topic": "sfm_initialization",
+    "filter": {},
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 11,
+    "evidence_quote": "In the 3D\nGaussian representation module, the camera used in 3D GS is calibrated by the Structure\nfrom Motion (SfM), and high-quality results can be obtained by only inputting the SfM\nsparse point cloud when initializing the 3D Gaussians set.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 11,
+        "evidence_quote": "In the 3D\nGaussian representation module, the camera used in 3D GS is calibrated by the Structure\nfrom Motion (SfM), and high-quality results can be obtained by only inputting the SfM\nsparse point cloud when initializing the 3D Gaussians set.",
+        "evidence_start": 238,
+        "evidence_end": 480,
+        "section": "Main modules"
+      },
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 8,
+        "evidence_quote": "3D GS starts with the initial set of sparse points from SfM or random\ninitialization.",
+        "evidence_start": 424,
+        "evidence_end": 509,
+        "section": "Density Control"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev05",
+    "split": "dev",
+    "question": "Các hệ số spherical harmonics giúp biểu diễn màu phụ thuộc góc nhìn như thế nào?",
+    "expected_answer": "Chúng mô hình hóa màu/diện mạo phụ thuộc hướng nhìn, cho phép màu thay đổi theo góc quan sát thay vì một giá trị RGB cố định.",
+    "topic": "view_dependent_color",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 5,
+    "evidence_quote": "𝑐 is represented by spherical harmonics (SH) coefficients to model view-dependent appearance. Unlike a static\nRGB value, SH functions allow the color to vary based on the viewing angle.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 5,
+        "evidence_quote": "𝑐 is represented by spherical harmonics (SH) coefficients to model view-dependent appearance. Unlike a static\nRGB value, SH functions allow the color to vary based on the viewing angle.",
+        "evidence_start": 3856,
+        "evidence_end": 4041,
+        "section": "Rendering with Learned 3D Gaussians"
+      },
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 4,
+        "evidence_quote": "one is directly storing coefficients of directional basis functions, such as spherical harmonics or spherical Gaussians,\nwhere the final color is computed as a function of these coefficients and the viewing direction.",
+        "evidence_start": 942,
+        "evidence_end": 1159,
+        "section": "Radiance Field"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev06",
+    "split": "dev",
+    "question": "Trong bước densification, Gaussian nhỏ ở vùng tái dựng thiếu và Gaussian lớn ở vùng tái dựng thừa được xử lý khác nhau thế nào?",
+    "expected_answer": "Clone Gaussian nhỏ ở vùng under-reconstructed; split Gaussian lớn ở vùng over-reconstructed.",
+    "topic": "density_clone_split",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 8,
+    "evidence_quote": "It involves either cloning small Gaussians in under-reconstructed areas or splitting large Gaussians in\nover-reconstructed regions.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 8,
+        "evidence_quote": "It involves either cloning small Gaussians in under-reconstructed areas or splitting large Gaussians in\nover-reconstructed regions.",
+        "evidence_start": 1189,
+        "evidence_end": 1320,
+        "section": "Density Control"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev07",
+    "split": "dev",
+    "question": "Thay vì tối ưu trực tiếp ma trận hiệp phương sai, 3D GS tối ưu hai đại lượng nào biểu diễn phép quay và tỉ lệ?",
+    "expected_answer": "Quaternion q cho phép quay và vector 3D s cho tỉ lệ.",
+    "topic": "covariance_parameters",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 7,
+    "evidence_quote": "3D GS chooses to optimize a quaternion 𝒒 and a 3D vector 𝒔. Here 𝒒 and 𝒔 represent rotation and scale,\nrespectively.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 7,
+        "evidence_quote": "3D GS chooses to optimize a quaternion 𝒒 and a 3D vector 𝒔. Here 𝒒 and 𝒔 represent rotation and scale,\nrespectively.",
+        "evidence_start": 3601,
+        "evidence_end": 3717,
+        "section": "Parameter Optimization"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev08",
+    "split": "dev",
+    "question": "Point pruning loại bỏ những Gaussian nào theo opacity và kích thước?",
+    "expected_answer": "Gaussian gần như trong suốt có alpha dưới ngưỡng, và Gaussian quá lớn trong world-space hoặc view-space.",
+    "topic": "pruning_conditions",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 8,
+    "evidence_quote": "It is executed by eliminating Gaussians that are virtually transparent (with𝛼\nbelow a specified threshold) and those that are excessively large in either world-space or view-space.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 8,
+        "evidence_quote": "It is executed by eliminating Gaussians that are virtually transparent (with𝛼\nbelow a specified threshold) and those that are excessively large in either world-space or view-space.",
+        "evidence_start": 1814,
+        "evidence_end": 1994,
+        "section": "Density Control"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev09",
+    "split": "dev",
+    "question": "Positional Encoding và Hierarchical Volume Sampling của NeRF lần lượt giúp cải thiện điều gì?",
+    "expected_answer": "Positional Encoding giúp biểu diễn chi tiết tần số cao; Hierarchical Volume Sampling cải thiện hiệu quả rendering.",
+    "topic": "nerf_pec_hvs",
+    "filter": {},
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 6,
+    "evidence_quote": "NeRF introduces two break-\nthroughs in the optimization of Multilayer Perceptron (MLP): Positional Encoding (PEC)\nand Hierarchical Volume Sampling (HVS). PEC helps enhance the network’s ability to\naccurately characterize the high-frequency details of an image, whereas HVS significantly\nimproves the image rendering efficiency.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 6,
+        "evidence_quote": "NeRF introduces two break-\nthroughs in the optimization of Multilayer Perceptron (MLP): Positional Encoding (PEC)\nand Hierarchical Volume Sampling (HVS). PEC helps enhance the network’s ability to\naccurately characterize the high-frequency details of an image, whereas HVS significantly\nimproves the image rendering efficiency.",
+        "evidence_start": 426,
+        "evidence_end": 753,
+        "section": "3D Scene reconstruction methods"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev10",
+    "split": "dev",
+    "question": "Explicit radiance field có lợi thế truy cập và đánh đổi về bộ nhớ/độ phân giải nào?",
+    "expected_answer": "Cho phép truy cập dữ liệu radiance trực tiếp và thường nhanh hơn, đổi lại bộ nhớ cao hơn và có thể có độ phân giải thấp hơn.",
+    "topic": "explicit_field_tradeoff",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 3,
+    "evidence_quote": "An explicit radiance field directly represents the distribution of light in a discrete spatial\nstructure, such as a voxel grid or a set of points [57, 236]. Each element in this structure stores the radiance information\nfor its respective location. This allows for direct and often faster access to radiance data but at the cost of higher\nmemory usage and potentially lower resolution.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 3,
+        "evidence_quote": "An explicit radiance field directly represents the distribution of light in a discrete spatial\nstructure, such as a voxel grid or a set of points [57, 236]. Each element in this structure stores the radiance information\nfor its respective location. This allows for direct and often faster access to radiance data but at the cost of higher\nmemory usage and potentially lower resolution.",
+        "evidence_start": 2720,
+        "evidence_end": 3105,
+        "section": "Radiance Field"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev11",
+    "split": "dev",
+    "question": "Trong mục Main modules, mô hình 3D GS gốc gồm ba module chính nào?",
+    "expected_answer": "3D Gaussian representation, attribute optimization và real-time rendering.",
+    "topic": "original_modules",
+    "filter": {
+      "section": "Main modules"
+    },
+    "gold_source_id": "gs_driving_review",
+    "gold_page": 11,
+    "evidence_quote": "The original 3D GS model based on three main modules: 3D Gaussian representation,\nattribute optimization, and real-time rendering.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_driving_review",
+        "gold_page": 11,
+        "evidence_quote": "The original 3D GS model based on three main modules: 3D Gaussian representation,\nattribute optimization, and real-time rendering.",
+        "evidence_start": 72,
+        "evidence_end": 202,
+        "section": "Main modules"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev12",
+    "split": "dev",
+    "question": "Trong mục Memory-efficient 3D GS, hai hướng chính để giảm nhu cầu bộ nhớ là gì và chúng có thể kết hợp không?",
+    "expected_answer": "Giảm số lượng Gaussian và nén các thuộc tính Gaussian. Hai hướng không loại trừ nhau, có thể kết hợp trong một framework.",
+    "topic": "memory_compression_directions",
+    "filter": {
+      "section": "Memory-efficient 3D GS"
+    },
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 9,
+    "evidence_quote": "Recent research has pursued two primary directions to address memory efficiency. First, several approaches focus on\nreducing the number of 3D Gaussians [31, 124, 188]. These methods either employ strategic pruning of low-impact\nGaussians, such as the volume-based masking [124], or represent neighboring Gaussians using the same properties\nstored within a “local anchor” obtained by clustering [160], hash-grid [31], etc. Second, researchers have developed\nmethods for compressing Gaussian’s properties [31, 124, 183]. For instance, Niedermayr et al. [183] compressed\ncolor and Gaussian parameters into compact codebooks, using sensitivity measures for effective quantization and\nfine-tuning. HAC [31] predicted the probability of each quantized attribute using Gaussian distributions and then devise\nan adaptive quantization module. These directions are not mutually exclusive; instead, one framework might use a\nhybrid approach combining multiple strategies.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 9,
+        "evidence_quote": "Recent research has pursued two primary directions to address memory efficiency. First, several approaches focus on\nreducing the number of 3D Gaussians [31, 124, 188]. These methods either employ strategic pruning of low-impact\nGaussians, such as the volume-based masking [124], or represent neighboring Gaussians using the same properties\nstored within a “local anchor” obtained by clustering [160], hash-grid [31], etc. Second, researchers have developed\nmethods for compressing Gaussian’s properties [31, 124, 183]. For instance, Niedermayr et al. [183] compressed\ncolor and Gaussian parameters into compact codebooks, using sensitivity measures for effective quantization and\nfine-tuning. HAC [31] predicted the probability of each quantized attribute using Gaussian distributions and then devise\nan adaptive quantization module. These directions are not mutually exclusive; instead, one framework might use a\nhybrid approach combining multiple strategies.",
+        "evidence_start": 3006,
+        "evidence_end": 3966,
+        "section": "Memory-efficient 3D GS"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev13",
+    "split": "dev",
+    "question": "Trong mục 3D GS for Sparse Input, đánh đổi giữa regularization-based và generalizability-based methods là gì?",
+    "expected_answer": "Regularization-based dùng ràng buộc mạnh và tối ưu theo cảnh, ưu tiên chất lượng hình học nhưng tốn tính toán; generalizability-based dùng learned priors để suy luận feed-forward nhanh và khái quát qua cảnh, đôi khi giảm độ trung thực hình học.",
+    "topic": "sparse_input_tradeoff",
+    "filter": {
+      "section": "3D GS for Sparse Input"
+    },
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 9,
+    "evidence_quote": "In practice, there is a trade-off between regularization-based\nmethods, which rely on strong constraints and per-scene optimization (favoring geometric quality but incurring\nhigher computation), and generalizability-based methods, which use learned priors for fast feed-forward inference\n(favoring speed and cross-scene generalization, but sometimes at the expense of geometric fidelity).",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 9,
+        "evidence_quote": "In practice, there is a trade-off between regularization-based\nmethods, which rely on strong constraints and per-scene optimization (favoring geometric quality but incurring\nhigher computation), and generalizability-based methods, which use learned priors for fast feed-forward inference\n(favoring speed and cross-scene generalization, but sometimes at the expense of geometric fidelity).",
+        "evidence_start": 1573,
+        "evidence_end": 1961,
+        "section": "3D GS for Sparse Input"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev14",
+    "split": "dev",
+    "question": "Deformable 3D Gaussians kết hợp canonical space với cấu trúc nào để mô hình hóa động lực không gian-thời gian?",
+    "expected_answer": "Các Gaussian được học trong canonical space, kết hợp deformation field là một spatial MLP để mô hình hóa động lực không gian-thời gian.",
+    "topic": "deformation_representation",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 12,
+    "evidence_quote": "The deformable 3D Gaussians are learned in a canonical space, coupled with a deformation field (i.e., a spatial\nMLP) that models the spatial-temporal dynamics.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 12,
+        "evidence_quote": "The deformable 3D Gaussians are learned in a canonical space, coupled with a deformation field (i.e., a spatial\nMLP) that models the spatial-temporal dynamics.",
+        "evidence_start": 729,
+        "evidence_end": 888,
+        "section": "Hybrid Representation"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  },
+  {
+    "id": "dev15",
+    "split": "dev",
+    "question": "Các hướng COLMAP-free thay sự phụ thuộc vào SfM tính trước bằng cách tối ưu đồng thời những gì?",
+    "expected_answer": "Đồng thời tối ưu camera poses và các tham số Gaussian theo cách offline/batch.",
+    "topic": "pose_free_optimization",
+    "filter": {},
+    "gold_source_id": "gs_general_survey",
+    "gold_page": 11,
+    "evidence_quote": "This line\nof work removes the dependency on pre-computed SfM by jointly optimizing camera poses and Gaussian parameters\nin an offline/batch manner.",
+    "gold_evidence": [
+      {
+        "gold_source_id": "gs_general_survey",
+        "gold_page": 11,
+        "evidence_quote": "This line\nof work removes the dependency on pre-computed SfM by jointly optimizing camera poses and Gaussian parameters\nin an offline/batch manner.",
+        "evidence_start": 1187,
+        "evidence_end": 1334,
+        "section": "Improved Optimization Algorithms"
+      }
+    ],
+    "evidence_verification": {
+      "method": "Exact normalized local-PDF page substring with offsets; semantic answer/support reviewed by Codex AI assistant.",
+      "student_review_status": "not claimed"
+    }
+  }
+]
